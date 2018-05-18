@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset ="utf-8">
+<meta name ="description" content ="segundo ejercicio del desafio numero 2">
+<meta name="keywords" content ="HTML5, CSS3, JavaScript, UNIVO">
+  <link rel="stylesheet" href="../../css/ejercicio2.css">
+  <script src="../../js/ejercicio2.js"></script>
+  <title>segundo ejercicio del desafio numero 2</title>
+</head>
+<body>
+<center>
+<br><br>
+  <fieldset class="clsfield" > 
+  <legend>REGISTRO DE EMPLEADOS</legend>
+
+  <form action="#">
+    <table>
+      <tr>
+        <td colspan="2" class="clsCabecera">DATOS DE EMPLEADOS</td>
+      </tr>
+      <tr>
+        <td class="clsFilas">NOMBRES</td>
+        <td><input type="text" id="id_txt_nombres"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">PRIMER APELLIDO</td>
+        <td><input type="text" id="id_txt_primerApellido"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">SEGUNDO APELLIDO</td>
+        <td><input type="text" id="id_txt_segundoApellido"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">DUI</td>
+        <td><input type="text" id="id_txt_dui"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">NIT</td>
+        <td><input type="text" id="id_txt_nit"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">NUP</td>
+        <td><input type="text" id="id_txt_nup"></td>
+      </tr>
+	  <tr>
+        <td class="clsFilas">NUMERO ISSS</td>
+        <td><input type="text" id="id_txt_isss"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">SEXO</td>
+		
+        <td><select id="id_cmb_sexo" style="width: 57.5%" onchange="casada()">
+					<option value="1">FEMENINO</option>
+					<option value="2">MASCULINO</option>
+				</select></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">PROFECION</td>
+        <td><input type="text" id="id_txt_profecion"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">FECHA DE NACIMIENTO</td>
+        <td><input type="date" id="id_dte_fechaNacimiento" style="width: 54%"></td>
+      </tr>
+      <tr>
+	        <tr>
+        <td class="clsFilas">RESIDENCIA</td>
+        <td><textarea id="id_txt_residencia" rows="4" cols="35"> </textarea></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">NUMERO DE TELEFONO</td>
+        <td><input type="tel" id="id_tel_telefono"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">CORREO ELECTRONICO</td>
+        <td><input type="email" id="id_mail_correo"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">ESTADO CIVIL</td>
+        <td><select id="id_cmb_estadoCivil" style="width: 56%">
+					<option value="1">SOLTER@</option>
+					<option value="2">CASAD@</option>
+					<option value="2">VIUD@</option>
+					<option value="2">DIVORCIAD@</option>
+				</select></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">APELLIDO DE CASADA</td>
+        <td><input type="text" id="id_txt_apellidoCasada"></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">LUGAR DE TRABAJO</td>
+        <td><textarea id="id_txt_trabajo" rows="4" cols="35"> </textarea></td>
+      </tr>
+	        <tr>
+        <td class="clsFilas">FECHA DE INICIO DE TRABAJO</td>
+        <td><input type="date" id="id_dte_iiniciioTrabajo" style="width: 54%"></td>
+      </tr>
+        <td class="clsFilas">SALARIO</td>
+        <td><input type="number" id="id_nmb_salario"></td>
+      </tr>
+    </table>
+	<BR>
+       <button type="button" >AGREGAR</button>
+	    <button type="button" >MODIFICAR</button>
+		 <button type="button" >ELIMINAR</button>
+		  <button type="button" onclick="guardar()">GUARDAR</button>
+		   <button type="button" >CANCELAR</button>
+      
+  </form>
+  </fieldset>
+  </center>
+
+</body>
+</html>

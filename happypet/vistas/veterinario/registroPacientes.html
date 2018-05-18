@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script type="text/javascript" src="../../js/modal.js"></script>
+  <script type="text/javascript" src="../../js/validacionMascotas.js"></script>
+  <title>Reg Pacientes</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="Hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="#">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rmascotas"  method="get">
+      <fieldset>
+                       <legend>REGISTRO DE PACIENTES</legend>
+                         <table>
+                             <tr>
+                               <link rel="stylesheet" href="../../css/modal.css">
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese el codigo paciente" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>NOMBRE <span class="requerido">*</span></td>
+                               <td><input type="text" id="nombre" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese el nombre paciente" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>CLIENTE<span class="requerido">*</span></td>
+                               <td><input type="text" id="nombreCliente" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese el nombre cliente"disabled required></td><td>  <a href="#" id="modalCliente" onclick="mostrarCliente()" hidden="true">SELECCIONAR </a>
+
+                                 <!-- The Modal -->
+                                 <div id="myModal" class="modal">
+
+                                   <!-- Modal content -->
+                                   <div class="modal-content">
+                                     <span class="close"  onclick="cerrarCliente()">&times;</span>
+                                     <TABLE class="modaltable">
+                                  <TR>
+                                    <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                                    <TH ROWSPAN=2 class="modalhead">APELLIDO </TH>
+                                    <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                                    <TH ROWSPAN=2 class="modalhead">DIRECCION</TH>
+                                    <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">CORREO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">FECHA REGISTRO</TH>
+
+                                  </TR>
+                                  <TR></TR>
+                                  <TR>
+                                            <TD >00001</TD><TD onclick="seleccionarClientetd1()">IRVIN</TD> <TD>ALVAREZ  </TD> <TD>56987412-0</TD> <TD>SAN MIGUEL 2 AVE SUR #606 BARRIO EL CALVARIO</TD> <TD>6985-1568</TD><TD>TEST@TEST.COM</TD><TD>2017-04-20</TD>
+
+                                  </TR>
+                                  <TR>
+                                          <TD>00002</TD><TD onclick="seleccionarClientetd2()">ALONSO </TD><TD>RIVAS</TD> <TD>18462159-6</TD> <TD>MONCAGUA 2 AVE NORTE #95 BARRIO CONCEPCION</TD> <TD>7458-6255</TD><TD>TEST@TEST.COM</TD><TD>2017-04-29</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00003</TD><TD onclick="seleccionarClientetd3()">ISABEL </TD> <TD>SANCHEZ</TD> <TD>78936561-4</TD> <TD>SAN MIGUEL 3 CALLE PONIENTE #98 </TD> <TD>7518-9532</TD><TD>TEST@TEST.COM</TD><TD>2017-03-22</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00004</TD><TD onclick="seleccionarClientetd4()">ANGELLY</TD> <TD>HERNADEZ</TD> <TD>84562848-4 </TD> <TD>BERLIN 1 AVE NORTE #95 BARRIO EL CENTRO</TD> <TD>6985-1548</TD><TD>TEST@TEST.COM</TD><TD>2017-02-20</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00005</TD><TD onclick="seleccionarClientetd5()">DANILO  </TD> <TD>JOYA</TD> <TD>12548429-5</TD> <TD>SAN SALVADOR 25 AVE NORTE #651 </TD> <TD>7120-9415</TD><TD>TEST@TEST.COM</TD><TD>2017-04-15</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00006</TD><TD onclick="seleccionarClientetd6()">JOSE  </TD> <TD> GARCIA </TD> <TD>16589545-7</TD> <TD>NUEVA GUADALUPE 3 CALLE ORIENTE #654 </TD> <TD>6495-3261</TD><TD>TEST@TEST.COM</TD><TD>2017-04-10</TD>
+                                  </TR>
+
+                                 </TABLE>
+                                   </div>
+
+                                 </div>
+                               </td>
+
+                             </tr>
+     						 <tr>
+                   <td>TELEFONO<span class="requerido">*</span></td>
+                   <td><input type="text" id="telefono" pattern="^[6-7|2]{1}[0-9]{3}-[0-9]{4}" placeholder="ingrese telefono de cilente"disabled required></td><td>  <a href="#" id="modalTelefono" onclick="mostrartelefono()" hidden="true">SELECCIONAR </a>
+
+                     <!-- The Modal -->
+                     <div id="myModaltelefono" class="modal">
+
+                       <!-- Modal content -->
+                       <div class="modal-content">
+                         <span class="close"  onclick="cerrartelefono()">&times;</span>
+                         <TABLE class="modaltable">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                        <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                        <TH ROWSPAN=2 class="modalhead">APELLIDO </TH>
+                        <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                        <TH ROWSPAN=2 class="modalhead">DIRECCION</TH>
+                        <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                        <TH ROWSPAN=2 class="modalhead">CORREO</TH>
+                        <TH ROWSPAN=2 class="modalhead">FECHA REGISTRO</TH>
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD><TD>IRVIN</TD> <TD>ALVAREZ  </TD> <TD>56987412-0</TD> <TD>SAN MIGUEL 2 AVE SUR #606 BARRIO EL CALVARIO</TD> <TD onclick="seleccionarTelefontd1()">6985-1568</TD><TD>TEST@TEST.COM</TD><TD>2017-04-20</TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002</TD><TD>ALONSO </TD><TD>RIVAS</TD> <TD>18462159-6</TD> <TD>MONCAGUA 2 AVE NORTE #95 BARRIO CONCEPCION</TD> <TD onclick="seleccionarTelefontd2()">7458-6255</TD><TD>TEST@TEST.COM</TD><TD>2017-04-29</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003</TD><TD>ISABEL </TD> <TD>SANCHEZ</TD> <TD>78936561-4</TD> <TD>SAN MIGUEL 3 CALLE PONIENTE #98 </TD> <TD onclick="seleccionarTelefontd3()">7518-9532</TD><TD>TEST@TEST.COM</TD><TD>2017-03-22</TD>
+                      </TR>
+                      <TR>
+                              <TD>00004</TD><TD>ANGELLY</TD> <TD>HERNADEZ</TD> <TD>84562848-4 </TD> <TD>BERLIN 1 AVE NORTE #95 BARRIO EL CENTRO</TD> <TD onclick="seleccionarTelefontd4()">6985-1548</TD><TD>TEST@TEST.COM</TD><TD>2017-02-20</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005</TD><TD>DANILO  </TD> <TD>JOYA</TD> <TD>12548429-5</TD> <TD>SAN SALVADOR 25 AVE NORTE #651 </TD> <TD onclick="seleccionarTelefontd5()">7120-9415</TD><TD>TEST@TEST.COM</TD><TD>2017-04-15</TD>
+                      </TR>
+                      <TR>
+                              <TD>00006</TD><TD>JOSE  </TD> <TD> GARCIA </TD> <TD>16589545-7</TD> <TD>NUEVA GUADALUPE 3 CALLE ORIENTE #654 </TD> <TD onclick="seleccionarTelefontd6()">6495-3261</TD><TD>TEST@TEST.COM</TD><TD>2017-04-10</TD>
+                      </TR>
+
+                     </TABLE>
+                       </div>
+
+                     </div>
+                   </td>
+     								</tr>
+
+
+                   <tr>
+                     <td>ESPECIE<span class="requerido">*</span></td>
+                    <td><input type="text" id="especie" pattern="[A-Za-z]{1,50}" placeholder="ingrese especie" maxlength="50" disabled required></td><td>  <a href="#" id="modalEspecie" onclick="mostrarEspecie()" hidden="true">SELECCIONAR </a>
+
+                       <!-- The Modal -->
+                       <div id="myModalEspecie" class="modal">
+
+                         <!-- Modal content -->
+                         <div class="modal-content">
+                           <span class="close"  onclick="cerrarEspecie()">&times;</span>
+                           <TABLE class="modaltable">
+                        <TR>
+                          <TH ROWSPAN=2 class="modalhead">CODIGO </TH>
+                          <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+
+                        </TR>
+                        <TR></TR>
+                        <TR>
+                                  <TD>00001</TD> <TD onclick="seleccionarEspecietd1()">CANINO  </TD>
+
+                        </TR>
+                        <TR>
+                                <TD>00002 </TD><TD onclick="seleccionarEspecietd2()">FELINO</TD>
+                              </TR>
+                        <TR>
+                                <TD>00003 </TD> <TD onclick="seleccionarClientetd3()">AVIAR</TD>
+                        </TR>
+                        <TR>
+                                <TD>00004</TD> <TD onclick="seleccionarEspecietd4()">PEZ</TD>
+                        </TR>
+                        <TR>
+                                <TD>00005</TD> <TD onclick="seleccionarEspecietd5()">REPTIL</TD>
+                        </TR>
+                       </TABLE>
+                         </div>
+
+                       </div>
+                     </td>
+</TR>
+						<tr>
+              <td>RAZA<span class="requerido">*</span></td>
+              <td><input type="text" id="raza" pattern="[A-Za-z\s]{1,50}" placeholder="ingrese raza" maxlength="50" disabled required></td><td>  <a href="#" id="modalRaza" onclick="mostrarRaza()" hidden="true">SELECCIONAR </a>
+
+                <!-- The Modal -->
+                <div id="myModalRaza" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close"  onclick="cerrarRaza()">&times;</span>
+                    <TABLE class="modaltable">
+                 <TR>
+                   <TH ROWSPAN=2 class="modalhead">CODIGO </TH>
+                   <TH ROWSPAN=2 class="modalhead">RAZA </TH>
+
+
+                 </TR>
+                 <TR></TR>
+                 <TR>
+                           <TD>00001</TD> <TD onclick="seleccionarRazatd1()">PASTOR ALEMAN  </TD>
+
+                 </TR>
+                 <TR>
+                         <TD>00002 </TD><TD onclick="seleccionarRazatd2()">COMUN</TD>
+                 </TR>
+                 <TR>
+                         <TD>00003 </TD> <TD onclick="seleccionarRazatd3()">HUSKY</TD>
+                 </TR>
+                 <TR>
+                         <TD>00004</TD> <TD onclick="seleccionarRazatd4()">POODLE</TD>
+                 </TR>
+                 <TR>
+                         <TD>00005  </TD> <TD onclick="seleccionarRazatd5()">RAGDOLL</TD>
+                 </TR>
+                 <TR>
+                         <TD>00006  </TD> <TD onclick="seleccionarRazatd6()"> MAINE COON </TD>
+                 </TR>
+
+                </TABLE>
+                           </tr>
+
+						 <tr>
+								<td class="clsFilas">SEXO</td>
+
+							<td><select id="id_cmb_sexo" disabled required>
+								<option value="1">MACHO</option>
+								<option value="2">HEMBRA</option>
+								</select></td>
+								</tr>
+
+						 <tr>
+                          <td class="clsFilas">FOTOGRAFIA<span class="requerido">*</span></td>
+
+                          <td> <input type="file" id="pic" accept="image/*" disabled riquired>
+
+                            </tr>
+
+
+
+                                 <tr>
+                                   <td>DESCRIPCION</td>
+                                   <td><textarea id="id_txt_descripcion" rows="4" placeholder="ingrese descripcion de mascota" cols="21" pattern="[A-Za-z\s]{1,3000}" maxlength="300" disabled></textarea></td>
+                             </tr>
+                             <tr>
+                               <td>FECHA DE INGRESO<span class="requerido">*</span></td>
+                               <td><input type="date" id="fechaRegistro" disabled required></td>
+                           </tr>
+
+     						<tr>
+                  <td>FECHA DE DECESO</td>
+                    <td><input type="date" id="fechaDeceso" disabled></td>
+
+                             </tr>
+
+                         </table>
+                         <TABLE class="modaltableinner">
+                         <TR>
+                         <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                         <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                         <TH ROWSPAN=2 class="modalhead">CLIENTE </TH>
+                         <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                         <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+                         <TH ROWSPAN=2 class="modalhead">RAZA</TH>
+                         <TH ROWSPAN=2 class="modalhead">SEXO</TH>
+                           <TH ROWSPAN=2 class="modalhead">FOTO</TH>
+                         <TH ROWSPAN=2 class="modalhead">FECHA INGRESO</TH>
+                          <TH ROWSPAN=2 class="modalhead">FECHA DECESO</TH>
+
+                         </TR>
+                         <TR></TR>
+                         <TR>
+                                <TD>00001</TD><TD >FLINSTONE</TD> <TD>IRVIN  </TD> <TD>6985-1568</TD> <TD>CANINO</TD> <TD>PASTOR ALEMAN</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-04-20</TD><TD>2018-04-20</TD>
+
+                         </TR>
+                         <TR>
+                              <TD>00002</TD><TD >BUDDY </TD><TD>ALONSO </TD> <TD>7458-6255</TD> <TD>CANINO</TD> <TD>COMUN</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-04-29</TD><TD></TD>
+                         </TR>
+                         <TR>
+                              <TD>00003</TD><TD >MISSY </TD> <TD>ISABEL</TD> <TD>7518-9532</TD> <TD>CANINO</TD> <TD>HUSKY</TD><TD>FEMENINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-03-22</TD><TD></TD>
+                         </TR>
+                         <TR>
+                              <TD>00004</TD><TD >FERN</TD> <TD>ANGELLY</TD> <TD>6985-1548 </TD> <TD>CANINO</TD> <TD>POODLE</TD><TD>FEMENINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-02-20</TD><TD>2019-04-20</TD>
+                         </TR>
+                         <TR>
+                              <TD>00005</TD><TD >FLASH </TD> <TD>DANILO </TD> <TD>712548429-5</TD> <TD>CANINO</TD> <TD>GREYHOUND</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/dog.png"></TD> <TD>2017-04-15</TD><TD></TD>
+                         </TR>
+                         <TR>
+                              <TD>00006</TD><TD >AURA  </TD> <TD> JOSE  </TD> <TD>6495-3261</TD> <TD>FELINO</TD> <TD>RAGDOLL</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/cat.png"></TD><TD>2017-04-10</TD><TD></TD>
+                         </TR>
+
+                         </TABLE>
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+table TD, table TH ,tableTR{
+
+  border:1.5px solid black;
+  margin: auto;
+  width: auto;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+table TR:hover {
+	background-color:#56b6e2;
+}
+TABLE{
+	border-radius: 5px;
+    border: 1.5px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow: 10px 10px 5px #404040;
+   margin: auto;
+  width: auto;
+  height: auto;
+
+  text-align: center;
+}
+.clsdui,.clsnit,.clsnombre,.clsproducto,.clstotal,.clsfecha
+{
+	width: 150px ;
+	height:40px;
+	color:#000000;
+	background-color:#01BCF3;
+}
+
+tr:nth-child(2n-2){
+
+	background-color:#93e3f9;
+}
+tr:nth-child(2n-1){
+
+	background-color:#02f2c6;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <TABLE>
+	<TR>
+		<TH ROWSPAN=2 class="clsdui">NOMBRE </TH>
+		<TH ROWSPAN=2 class="clsnit">APELLIDO </TH>
+		<TH ROWSPAN=2 class="clsnombre">DUI</TH>
+		<TH ROWSPAN=2 class="clsproducto">NIT</TH>
+		<TH ROWSPAN=2 class="clstotal">NACIONALIDAD</TH>
+		<TH ROWSPAN=2 class="clsfecha">CELULAR</TH>
+
+	</TR>
+	<TR></TR>
+	<TR>
+		        <TD>IRVIN</TD> <TD>ALVAREZ  </TD> <TD>56987412-0</TD> <TD>4892-150796-130-2</TD> <TD>NACIONAL</TD><TD>6987-3546</TD>
+
+	</TR>
+	<TR>
+				  <TD>ALONSO </TD><TD>RIVAS</TD> <TD>18462159-6</TD> <TD>4452-150796-115-1</TD> <TD>NACIONAL</TD><TD>7845-9643</TD>
+	</TR>
+	<TR>
+				  <TD>ISABEL </TD> <TD>SANCHEZ</TD> <TD>0</TD> <TD>5618-090687-115-0</TD> <TD>EXTRANGERO</TD><TD>6987-6541</TD>
+	</TR>
+	<TR>
+				  <TD>ANGELLY</TD> <TD>HERNADEZ</TD> <TD>8456248-4 </TD> <TD>1594-080584-100-14</TD> <TD>NACIONAL</TD><TD>7458-3652</TD>
+	</TR>
+	<TR>
+				  <TD>DANILO  </TD> <TD>JOYA</TD> <TD>12548429-5</TD> <TD>1041-080170-112-5</TD> <TD>NACIONAL</TD><TD>6985-1891</TD>
+	</TR>
+	<TR>
+				  <TD>JOSE  </TD> <TD> GARCIA </TD> <TD>16589545-7</TD> <TD>8288-100576-505-4</TD> <TD>NACIONAL</TD><TD>7986-3154</TD>
+	</TR>
+	<TR>
+				  <TD>GABRIELA  </TD> <TD> PERDOMO </TD> <TD>89456269-8</TD> <TD>4891-020489-602-9</TD> <TD>NACIONAL</TD><TD>7854-6521</TD>
+	</TR>
+	<TR>
+			     <TD>TEREZA  </TD> <TD>HERNADEZ </TD> <TD>15620984-3</TD> <TD>4789-230693-158-2</TD> <TD>NACIONAL</TD><TD>6359-9842</TD>
+	</TR>
+	<TR>
+				  <TD>GENESIS  </TD> <TD>CHEVEZ</TD> <TD>78469213-5</TD> <TD>1594-290891-581-3</TD> <TD>NACIONAL</TD><TD>6325-9746</TD>
+	</TR>
+	<TR>
+				  <TD>ANGEL  </TD> <TD>DE LEON </TD> <TD>0</TD> <TD>1485-040688-184-7</TD> <TD>EXTRANGERO</TD><TD>7954-9651</TD>
+	</TR>
+	<TR>
+				  <TD>KEVIN </TD> <TD>MARTINEZ </TD> <TD>0</TD> <TD>3549-110970-265-5</TD> <TD>EXTRANGERO</TD><TD>6452-5481</TD>
+	</TR>
+	<TR>
+				  <TD>BRAYAN  </TD> <TD>VENTURA </TD> <TD>0 </TD> <TD>9845-230498-350-6</TD> <TD>EXTRANGERO</TD><TD>7962-1860</TD>
+	</TR>
+	<TR>
+				  <TD>JOSE  </TD> <TD>GRANADOS </TD> <TD>0 </TD> <TD>6518-150494-654-8</TD> <TD>EXTRANGERO</TD><TD>6021-3157</TD>
+	</TR>
+	<TR>
+				  <TD>GABRIELA  </TD> <TD>CRUZ </TD> <TD>58492301-6</TD> <TD>1587-200695-519-3</TD> <TD>NACIONAL</TD><TD>6154-1654</TD>
+	</TR>
+	<TR>
+			      <TD>NOHEMY  </TD> <TD>SANTOS </TD> <TD> 78198460-3</TD> <TD>1485-300570-517-1</TD> <TD>NACIONAL</TD><TD>7160-1818</TD>
+	</TR>
+					  <TD>ELIAS  </TD> <TD>TREJO </TD> <TD> 14862850-6</TD> <TD>3549-110970-265-5</TD> <TD>NACIONAL</TD><TD>6660-1864</TD>
+	</TR>
+	<TR>
+				  <TD>LIZANDRO  </TD> <TD>NOE </TD> <TD>94824615-0 </TD> <TD>9845-230498-350-6</TD> <TD>NACIONAL</TD><TD>7921-4892</TD>
+	</TR>
+	<TR>
+				  <TD>HERBERT  </TD> <TD>CHAVEZ </TD> <TD>20148147-1 </TD> <TD>6518-150494-654-8</TD> <TD>NACIONAL</TD><TD>6914-9810</TD>
+	</TR>
+	<TR>
+				  <TD>JUAN </TD> <TD>FIGUEROA </TD> <TD>0 </TD> <TD>1587-200695-519-3</TD> <TD>EXTRANGERO</TD><TD>7849-8921</TD>
+	</TR>
+	<TR>
+			      <TD>LUIS  </TD> <TD>ZELAYA </TD> <TD> 7819460-3</TD> <TD>1485-300570-517-5</TD> <TD>NACIONAL</TD><TD>6984-1892</TD>
+	</TR>
+</TABLE>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+</script>
+
+</body>
+</html>

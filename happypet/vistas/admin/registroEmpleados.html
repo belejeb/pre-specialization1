@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script type="text/javascript" src="../../js/validacionesEmpleados.js"></script>
+  <title>Reg Empleados</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+  <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rempleados"  method="get">
+      <fieldset>
+<legend>REGISTRO DE EMPLEADOS</legend>
+  <table>
+    <tr>
+     <link rel="stylesheet" href="../../css/modal.css">
+     <td>NOMBRE<span class="requerido"></span></td>
+     <td><input type="text" id="nombre" name="nombre" pattern= "^[A-Za-z\s]*$" maxlength="50" disabled required placeholder="ingrese nombre empleado"></td>
+    </tr>
+    <tr>
+     <td>APELLIDO<span class="requerido"></span></td>
+     <td><input type="text" id="apellido" pattern="^[A-Za-z\s]*$" maxlength="50" disabled required placeholder="ingrese apellido empleado"></td>
+    </tr>
+    <tr>
+      <td>DUI<span class="requerido"></span></td>
+      <td><input type="text" id="dui" pattern="^\d{8}-\d{1}$" maxlength="10" disabled required placeholder="ingrese dui"></td>
+    </tr>
+    <tr>
+      <td>NIT<span class="requerido"></span></td>
+      <td><input type="text" id="nit" pattern= "^\d{4}-\d{6}-\d{3}-\d{1}$" maxlength="17" disabled required placeholder="ingrese nit"></td>
+    </tr>
+    <tr>
+      <td>FECHA CONTRATACION<span class="requerido"></span></td>
+      <td><input type="date" id="fecha"  disabled required></td>
+    </tr>
+      <tr>
+      <td>FOTO</td>
+      <td><input type="file" id="foto" required accept="image/*" disabled ></td>
+    </tr>
+    <tr>
+    <td>CURRICULUM</td>
+     <td><input type="file" id="cv" disabled accept=".doc, .docx,.pdf" required></td>
+    </tr>
+    <tr>
+      <td>SEXO<span class="requerido"></span></td>
+      <td>
+          <input type="radio" id="sexom"name="genero" required disabled value="1">Masculino
+          <input type="radio" id="sexof" name="genero" required disabled value="2">Femenino
+      </td>
+    </tr>
+    <tr>
+      <td>TIPO<span class="requerido"></span></td>
+      <td><input type="radio" id="ve" name="tipo" required value="1" disabled checked="true" onclick="tipoVeterinario()">Veterinario
+          <input type="radio" id="em"name="tipo" required  value="2" disabled onclick="tipoEmpleado()">Empleado</td>
+    </tr>
+    <tr>
+      <td>NUMERO JVMV<span class="requerido"></span></td>
+      <td><input type="text" id="jvmv" pattern= "^[0-9]{12}" maxlength="12" placeholder="ingrese numero de junta" disabled required></td>
+    </tr>
+    <tr>
+     <td>ESPECIALIDAD<span class="requerido"></span></td>
+     <td><input  list="espe" id="especialidad"  maxlength="50"  disabled required>
+      <datalist id="espe">
+      <option value="cirujano">
+      <option value="mayores">
+      <option value="menores">
+        <option value="cardiologo">
+      </datalist>
+     </td>
+    </tr>
+    <tr>
+      <td>ESTADO<span class="requerido"></span></td>
+      <td>
+          <input type="radio" id="ac" name="est" required disabled checked="true">Activo
+          <input type="radio" id="inac"name="est" required disabled>Inactivo
+      </td>
+    </tr>
+    </table>
+
+
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">NOMBRE</TH>
+                        <TH ROWSPAN=2 class="modalhead">APELLIDO</TH>
+                        <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                        <TH ROWSPAN=2 class="modalhead">NIT</TH>
+                        <TH ROWSPAN=2 class="modalhead">FECHA CONTRATACION</TH>
+                        <TH ROWSPAN=2 class="modalhead">FOTO</TH>
+                        <TH ROWSPAN=2 class="modalhead">SEXO</TH>
+                        <TH ROWSPAN=2 class="modalhead">ESPECIALIDAD</TH>
+                        <TH ROWSPAN=2 class="modalhead">ESTADO</TH>
+
+                      </TR>
+                       <tr></tr>
+                      <TR>
+                           <TD>OSCAR MIGUEL</TD>
+                           <TD>ROMERO CRUZ</TD>
+                           <TD>83748393-9</TD>
+                           <TD>4783-021092-384-1</TD>
+                           <TD>2017-01-02</TD>
+                           <TD><img src="../../imagenes/iconoFemenino.png" width="48" height="48"></TD>
+                           <TD>Masculino</TD>
+                           <TD>MAYORES</TD>
+                           <TD>Activo</TD>
+                      </TR>
+                      <TR>
+                           <TD>ANGELLY</TD>
+                           <TD>RIVAS</TD>
+                           <TD>38493434-2</TD>
+                           <TD>4839-110291-383-3</TD>
+                           <TD>2016-10-03</TD>
+                           <TD><img src="../../imagenes/iconoMasculino.png" width="48" height="48"></TD>
+                           <TD>Masculino</TD>
+                           <TD>MENORES</TD>
+                           <TD>Activo</TD>
+                      </TR>
+
+
+                     </TABLE>
+
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

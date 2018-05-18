@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script type="text/javascript" src="../../js/validacionFacturacion.js"></script>
+  <script type="text/javascript" src="../../js/modal.js"></script>
+  <title>Facturacion</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+            <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+        <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rfacturacion"  method="get">
+      <fieldset>
+                       <legend>FACTURACION</legend>
+                         <table>
+                             <tr>
+                               <link rel="stylesheet" href="../../css/modal.css">
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese codigo de factura" disabled required></td>
+                             </tr>
+                             <tr>
+                             <td>FECHA<span class="requerido">*</span></td>
+                               <td><input type="date" id="fecha" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>NOMBRE CLIENTE<span class="requerido">*</span></td>
+                               <td><input type="text" id="nombreCliente" pattern="[A-Za-z \s]{1,50}" maxlength="50" placeholder="ingrese el nombre cliente"disabled required></td><td>  <a  id="modalCliente" onclick="mostrarCliente()" hidden="true">SELECCIONAR </a>
+
+                                 <!-- The Modal -->
+                                 <div id="myModal" class="modal">
+
+                                   <!-- Modal content -->
+                                   <div class="modal-content">
+                                     <span class="close"  onclick="cerrarCliente()">&times;</span>
+                                     <TABLE class="modaltable">
+                                  <TR>
+                                    <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                                    <TH ROWSPAN=2 class="modalhead">APELLIDO </TH>
+                                    <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                                    <TH ROWSPAN=2 class="modalhead">DIRECCION</TH>
+                                    <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">CORREO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">FECHA REGISTRO</TH>
+
+                                  </TR>
+                                  <TR></TR>
+                                  <TR>
+                                            <TD >00001</TD><TD onclick="seleccionarClientetd1()">IRVIN</TD> <TD>ALVAREZ  </TD> <TD>56987412-0</TD> <TD>SAN MIGUEL 2 AVE SUR #606 BARRIO EL CALVARIO</TD> <TD>6985-1568</TD><TD>TEST@TEST.COM</TD><TD>2017-04-20</TD>
+
+                                  </TR>
+                                  <TR>
+                                          <TD>00002</TD><TD onclick="seleccionarClientetd2()">ALONSO </TD><TD>RIVAS</TD> <TD>18462159-6</TD> <TD>MONCAGUA 2 AVE NORTE #95 BARRIO CONCEPCION</TD> <TD>7458-6255</TD><TD>TEST@TEST.COM</TD><TD>2017-04-29</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00003</TD><TD onclick="seleccionarClientetd3()">ISABEL </TD> <TD>SANCHEZ</TD> <TD>78936561-4</TD> <TD>SAN MIGUEL 3 CALLE PONIENTE #98 </TD> <TD>7518-9532</TD><TD>TEST@TEST.COM</TD><TD>2017-03-22</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00004</TD><TD onclick="seleccionarClientetd4()">ANGELLY</TD> <TD>HERNADEZ</TD> <TD>84562848-4 </TD> <TD>BERLIN 1 AVE NORTE #95 BARRIO EL CENTRO</TD> <TD>6985-1548</TD><TD>TEST@TEST.COM</TD><TD>2017-02-20</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00005</TD><TD onclick="seleccionarClientetd5()">DANILO  </TD> <TD>JOYA</TD> <TD>12548429-5</TD> <TD>SAN SALVADOR 25 AVE NORTE #651 </TD> <TD>7120-9415</TD><TD>TEST@TEST.COM</TD><TD>2017-04-15</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00006</TD><TD onclick="seleccionarClientetd6()">JOSE  </TD> <TD> GARCIA </TD> <TD>16589545-7</TD> <TD>NUEVA GUADALUPE 3 CALLE ORIENTE #654 </TD> <TD>6495-3261</TD><TD>TEST@TEST.COM</TD><TD>2017-04-10</TD>
+                                  </TR>
+
+                                 </TABLE>
+                                   </div>
+
+                                 </div>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td>SERVICIO<span class="requerido">*</span></td>
+                            <td><select id="servicio" disabled required>
+                            <option>SELECCIONE UNA OPCION</option>
+                            <option>Operacion</option>
+                            <option>Control Medico</option>
+                            <option>Vacunacion</option>
+                            <option>Desparacitacion</option>
+                            <option>Hospedaje</option>\
+                            <option>Ventas de Productos</option>
+                            </select></td>
+                             </tr>
+                             <tr>
+                               <td>PRODUCTOS<span class="requerido">*</span></td>
+                               <td><input type="text" id="productos" pattern="[A-Za-z\s]{1,50}" maxlength="50" placeholder="ingrese el producto" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>CANTIDAD<span class="requerido">*</span></td>
+                               <td><textarea type="text" id="cantidad" pattern="[0-9]{1,50}" maxlength="250" placeholder="ingrese la cantidad" disabled required></textarea></td>
+                             </tr>
+                             <tr>
+                                     <td>IVA<span class="requerido">*</span></td>
+                                       <td><input type="text" id="iva" maxlength="6" placeholder="total factura"disabled required></td>
+                                         </tr>
+
+     						 <tr>
+                               <td>PRECIO<span class="requerido">*</span></td>
+                               <td><input type="text" id="precio" maxlength="4" pattern="^\d+(\.\d{1,2})?" placeholder="ingrese precio" disabled required></td>
+                             </tr>
+     						 <tr>
+                   			<td>TOTAL<span class="requerido">*</span></td>
+                   				<td><input type="text" id="totalFactura" maxlength="6" pattern="^\d+(\.\d{1,2})?" placeholder="total factura"disabled required></td>
+                             </tr>
+
+                         </table>
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                        <TH ROWSPAN=2 class="modalhead">FECHA</TH>
+                        <TH ROWSPAN=2 class="modalhead">CLIENTE</TH>
+                        <TH ROWSPAN=2 class="modalhead">SERVICIO</TH>
+                        <TH ROWSPAN=2 class="modalhead">PRODUCTOS</TH>
+                        <TH ROWSPAN=2 class="modalhead">CANTIDAD</TH>
+                        <TH ROWSPAN=2 class="modalhead">PRECIO UNITARIO</TH>
+                        <TH ROWSPAN=2 class="modalhead">TOTAL</TH>
+                        <TH ROWSPAN=2 class="modalhead">IMPRIMIR</TH>
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD><TD>15-03-2016</TD> <TD>Cecilia Granados</TD><TD>Ventas de Productos</TD> <TD>Vacuna para la rabia</TD><TD>3</TD><TD>$10</TD><TD>$30</TD><TD></TD>
+                      </TR>
+                      <TR>
+                              <TD>00002</TD><TD>16-04-2017</TD> <TD>Julio Chavez</TD> <TD>Ventas de Productos</TD> <TD>Vacuna para la rabia</TD><TD>1</TD><TD>$10</TD><TD>$10</TD><TD></TD>
+                      </TR>
+                      <TR>
+                              <TD>00003</TD><TD>9-03-2017</TD> <TD>Juan Campos</TD> <TD>Ventas de Productos</TD> <TD>Jabon de Baño para perros</TD><TD>4</TD><TD>$5</TD><TD>$20</TD><TD></TD>
+                      </TR>
+                      <TR>
+                             <TD>00004</TD><TD>5-10-2017</TD> <TD>Jose Cedillo</TD> <TD>Ventas de Productos</TD> <TD>Shampoo para perros</TD><TD>3</TD><TD>$6</TD><TD>$18</TD><TD></TD>
+                      </TR>
+                      <TR>
+                              <TD>00005</TD><TD>6-07-2017</TD> <TD>Javier Sanchez</TD> <TD>Ventas de Productos</TD> <TD>Jabon de baño para perros</TD><TD>l</TD><TD>$5</TD><TD>$5</TD><TD></TD>
+                      </TR>
+                     </TABLE>
+
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

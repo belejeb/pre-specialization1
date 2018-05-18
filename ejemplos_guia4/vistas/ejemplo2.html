@@ -1,0 +1,46 @@
+<html lang="es">
+<head>
+<meta charset=""utf-8">
+<title>Validacion de Formularios:Ingreso de Solo Letras</title>
+<link rel="stylesheet" href="../recursos/css/estilo.css">
+<script>
+function iniciar()
+{
+	document.getElementById("informacion").addEventListener("invalid", validacion, true);
+	document.getElementById("informacion").addEventListener("input", controlar, false);
+}
+function controlar(e)
+{
+ var elemento=e.target;
+ if(elemento.validity.valid)
+ {
+ elemento.classList.add('css_ok_input');
+ elemento.classList.remove('css_error_input');
+} 
+else
+{
+	elemento.classList.add('css_error_input');
+  }
+}
+function validacion(e)
+{
+var elemento=e.target;
+elemento.classList.add('cs_error_input');
+}
+window.addEventListener("load",iniciar,false);
+</script>
+</head>
+<body>
+<section>
+	<form id="informacion"name="informacion" method="get">
+		<label for="input1">Permitir solo letras sin espacios:</label> <input type="text"name="input1" id="input1" pattern= "^[A-Za-z]*$" required><br>
+        <label for="input2">Permitir solo letras con espacios:</label> <input type="text"name="input2" id="input2" pattern= "^[A-Za-z\s]*$" required><br>
+        <label for="input3">Permitir solo 3 letras mayusculas:</label> <input type="text"name="input3" id="input3" pattern= "^[A-Z]{3}$" required><br>
+	    <label for="input4">Permitir solo 3 o m&aacute;s letras mayusculas:</label> <input type="text"name="input4" id="input4" pattern= "^[A-Z]{3,}$"
+	    required><br>
+	    <label for="input5">Permitir la primer letra pueda ser A o a:</label> <input type="text"name="input5" id="input5" pattern= "^A|a?[M-Zm-z]*$" required><br>
+	    <input type="submit" id ="enviar" value= "REGISTRAR">
+</form>
+</section>
+</body>
+</html>

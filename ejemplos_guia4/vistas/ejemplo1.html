@@ -1,0 +1,63 @@
+<html lang="es">
+<head>
+<meta charset=""utf-8">
+<title>Validacion de Formularios:validacion en vivo</title>
+<link rel="stylesheet" href="../recursos/css/estilo.css">
+<script>
+function iniciar()
+{   
+	document.getElementById("miedad").addEventListener("change", cambiarrango, false);
+	document.getElementById("enviar").addEventListener("click", enviar, false);
+	document.getElementById("informacion").addEventListener("invalid", validacion, true);
+	document.getElementById("informacion").addEventListener("input", controlar, false);
+}
+function cambiarrango(){
+var calcular = document.getElementById("miedad").value=20;
+if(calcular<20){
+	calcular=0;
+	document.getElementById("miedad").value=20;
+	}
+	document.getElementById("salida_rango").innerHTML=calcular + 'a'+document.getElementById("miedad").value;
+}
+
+
+function controlar(e)
+{
+ var elemento=e.target;
+ if(elemento.validity.valid)
+ {
+  elemento.classList.remove('css_error_input');
+ elemento.classList.add('css_ok_input');
+} 
+else
+{
+	elemento.classList.add('css_error_input');
+	 elemento.classList.remove('css_ok_input');
+  }
+}
+function validacion(e)
+{
+var elemento=e.target;
+elemento.classList.add('cs_error_input');
+}
+function enviar(){
+var valido_form = document.getElementById("informacion").checkValidity();
+if (valido_form){
+document.getElementById("informacion").submit();
+	}
+}	
+window.addEventListener("load",iniciar,false);
+</script>
+</head>
+<body>
+<section>
+	<form id="informacion"name="informacion" method="get">
+		<label for="usuario">Usuario:</label> <input type="text"name="usuario" id="usuario" pattern= "^[A-Z]{3}" maxlength="3" required><br>
+        <label for="miemail">Email:</label> <input type="email"name="miemail" id="miemail"  required><br>
+        Rango de edad <input type ="range" name="miedad" id="miedad" min="0" max ="80" step="20" value="20">
+		<output id ="salida_rango">0 a 20</output>
+	    <input type="submit" id ="enviar" value= "REGISTRAR">
+</form>
+</section>
+</body>
+</html>

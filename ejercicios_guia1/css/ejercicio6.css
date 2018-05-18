@@ -1,0 +1,13 @@
+TABLE,TD,TH{
+border:1.5px solid black;
+margin: auto;
+  width: 40%;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+.clsDepartamentos,.clsMunicipio,.clsTrimeste1,.clsTrimeste2,.clsTrimeste3,.clsTrimeste4{
+	height:70px;
+	color:#ffffff;
+	background-color:#a4d5f2;
+}

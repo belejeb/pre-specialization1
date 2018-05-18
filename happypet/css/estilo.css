@@ -1,0 +1,193 @@
+#contenedorPrincipal{
+  margin: auto;
+  width: 1024px;
+  height: auto;
+  box-sizing: border-box;
+/*div que contiene todo los elementos y formularios*/
+}
+body{
+  /*background de la app*/
+  background: radial-gradient(ellipse at center, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+}
+.css_error_input
+{
+  /*css para todo los inputs en caso de error*/
+
+ background-color: red;
+ color: black;
+ border: 5px solid blue;
+ border-radius: 5px
+}
+.css_ok_input
+{
+  /*csspara todos los inputs correctos*/
+ background-color: #3af268;
+ color: black;
+ border: 1px solid #3af268;
+ border-radius: 3px
+}
+table td {
+  /*tabla del formulario y espacio que hay entre ellos*/
+    padding: 15px;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type=date],select, input[type=number] {
+     border: 1px solid #000;
+	border-radius:3px;
+	text-transform:uppercase;
+}
+fieldset {
+
+    width: 690px;
+    height:880px;
+    border: 3px solid #FFF;
+	border-radius:3px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+input:required:invalid
+{
+  background-color: yellow;
+  color: black;
+  border: 5px solid blue;
+  border-radius: 5px
+}
+
+.requerido {
+    color: red;
+}
+a{
+  color: blue;
+  cursor: pointer;
+}
+
+
+legend {
+    font-size: 20px;
+    text-shadow: 2px 2px #000;
+}
+textarea{
+	 border: 1px solid #000;
+	border-radius:3px;
+	text-transform:uppercase;
+	font-family: serif;
+
+}
+
+#cabecera{
+  width: 1024px;
+  height: 75px;
+  background-color: rgb(88, 161, 236);
+  border: 1px solid black;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px grey;
+}
+#cabecera h1{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 48px;
+  padding: 0;
+  margin: auto;
+  font-family: "Helvetica", sans-serif;
+}
+#menu{
+  width: 150px;
+  margin-left: -80px;
+  float: left;
+}
+#menu ul{
+  list-style: none;
+}
+#menu li{
+  border: 1px solid black;
+  padding: 5px;
+  max-height: 20px;
+  width: 200px;
+}
+#menu li:first-child{
+    background-color: rgb(88, 161, 236);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+#menu li:last-child{
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+#menu a{
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+/*menu */
+#menu li:hover{
+  background-color: lightgrey;
+}
+
+#menu ul li:hover ul {
+  display: block;
+}
+#menu ul ul {
+  position: relative;
+  margin-left: 166px;
+  top: -10px;
+  display: none;
+}
+#menu ul ul li {
+  padding: 5px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #e9e9e9;
+}
+#menu ul ul li a {
+  color: black;
+  font-size: 12px;
+}
+
+#section{
+  width: 789px;
+  height: 500px;
+  float: left;
+  margin-left: 125px;
+  margin-top: 15px;
+  background-color: grey;
+  border-radius: 5px;
+  overflow-y: scroll;
+  box-shadow: 1px 1px 1px black;
+}
+#botones{
+  float: left;
+  width: 789px;
+  margin-left: 235px;
+  margin-top: 10px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px grey;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#botones button{
+  width: 105px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-right: 10px;
+}
+footer{
+  width: 1024px;
+  height: 75px;
+  clear: both;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px grey;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 40px;
+  padding: 0;
+  margin: auto;
+  font-family: "Helvetica", sans-serif;
+  color:#000;
+  background-color: #3187EC;
+
+}

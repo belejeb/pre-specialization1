@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/ejercicio3.css">
+    <script type="text/javascript" src="../../js/validarVenta.js"></script>
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>Registro de Ventas</h1>
+        </header>
+
+        <menu>
+
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="ventas.html">Ventas</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+            </ul>
+        </menu>
+
+        <nav>
+            <ul>
+                <li><button name="nuevo"><img src="../../imagenes/nuevo-usuario.png" alt=""></button></li>
+                <li><button name="modificar"><img src="../../imagenes/edit-profile.png" alt=""></button></li>
+                <li><button name="eliminar"><img src="../../imagenes/delete-user.png" alt=""></button></li>
+                <li><button name="guardar" onclick="validarVenta()"><img src="../../imagenes/guardar.png" alt=""></button></li>
+                <li><button name="cancelar"><img src="../../imagenes/cancel.png" alt=""></button></li>
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <form action="#">
+                <fieldset>
+                    <legend>REGISTRO DE VENTAS</legend>
+                    <table>
+                        <tr>
+                            <td>CLIENTE<span class="requerido">*</span></td>
+                            <td>
+                                <select>
+                                <option>JUAN PEREZ</option>
+                                <option>CARLOS SANCHEZ</option>
+                                <option>MARIA ALVAREZ</option>
+                                <option>PEDRO LOPEZ</option>
+                                <option>ISABEL DIAZ</option>
+                              </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>FECHA<span class="requerido">*</span></td>
+                            <td><input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td>TELEFONO</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>PRODUCTO<span class="requerido">*</span></td>
+                            <td><select>
+                                  <option>LAVADORA</option>
+                                  <option>LICUADORA</option>
+                                  <option>COCINA ELECTRICA</option>
+                                  <option>REFRIGERADOR</option>
+                                  <option>HORNOS</option>
+                          </select></td>
+                        </tr>
+                        <tr>
+                            <td>CODIGO PRODUCTO<span class="requerido">*</span></td>
+                            <td><input type="text" id="codigo"></td>
+                            <td><div class="error" id="mensaje1">Ingresa el código</div></td>
+                        </tr>
+                        <tr>
+                            <td>CANTIDAD<span class="requerido">*</span></td>
+                            <td><input type="text" id="cantidad"></td>
+                            <td><div class="error" id="mensaje2">Ingresa la cantidad de producto</div></td>
+                        </tr>
+                        <tr>
+                            <td>PRECIO UNITARIO<span class="requerido">*</span></td>
+                            <td><input type="text" id="precioUnitario"></td>
+                            <td><div class="error" id="mensaje3">Ingresa el precio unitario</div></td>
+                        </tr>
+                        <tr>
+                            <td>IMPORTE TOTAL<span class="requerido">*</span></td>
+                            <td>
+                                <input type="text" id="importe">
+                            </td>
+                            <td><div class="error" id="mensaje4">Ingresa el importe total</div></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+
+        <footer>
+            <p>Copyright (c) 2017 TODOS LOS DERECHOS RESERVADOS.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

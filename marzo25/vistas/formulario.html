@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulario</title>
+	<style type="">
+	td{
+		height: 30px;
+	}
+	.sub_titulo{
+	font-size: 16px;
+	background-color: #ff9999;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	}
+	.titulos{
+	font-size: 20px;
+	font-weight: bold;
+	}
+
+	</style>
+	<script type="text/javascript" src="../recursos/js/recibir.js"></script>
+</head>
+<body>
+	<center>
+		<form>
+			<table style="border:1px solid black; width: 40%; border-spacing: 0px;">
+				<tr>
+					<td colspan="2" class="sub_titulo">Información personal</td>
+				</tr>
+				<tr>
+					<td class="titulos">Nombres:</td>
+					<td><input type="text" name="nombres" required></td>
+				</tr>
+				<tr>
+					<td class="titulos">Apellidos:</td>
+					<td><input type="text" name="apellidos" required></td>
+				</tr>
+				<tr>
+					<td class="titulos">Dirección:</td>
+					<td><input type="text" name="direccion" required></td>
+				</tr>
+				<tr>
+					<td class="titulos">Número de celular:</td>
+					<td><input type="text" name="celular" required></td>
+				</tr>
+				<tr>
+					<td class="titulos">Edad:</td>
+					<td><input type="number" name="edad" required></td>
+				</tr>
+				<tr>
+					<td class="titulos">Correo eléctronico:</td>
+					<td><input type="email" name="correo" required></td>
+				</tr>
+				<tr>
+					<td class="titulos">Color favorito:</td>
+					<td><input type="color" name="color" required></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+					<!--input type="submit" value="Enviar"-->
+						<button onclick="datos()">Aceptar</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <link rel="stylesheet" href="../../css/modal.css">
+  <script type="text/javascript" src="../../js/modal.js"></script>
+  <script type="text/javascript" src="../../js/validacionFichaMed.js"></script>
+  <title>Ficha Medica</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="RfichaMed"  method="get">
+      <fieldset>
+                       <legend>REGISTRO DE FICHA MEDICA</legend>
+                         <table>
+                             <tr>
+
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese el codigo de ficha medica" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>NOMBRE CLIENTE<span class="requerido">*</span></td>
+                               <td><input type="text" id="nombreCliente" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese el nombre cliente"disabled required></td><td>  <a  id="modalCliente" onclick="mostrarCliente()" hidden="true">SELECCIONAR </a>
+
+                                 <!-- The Modal -->
+                                 <div id="myModal" class="modal">
+
+                                   <!-- Modal content -->
+                                   <div class="modal-content">
+                                     <span class="close"  onclick="cerrarCliente()">&times;</span>
+                                     <TABLE class="modaltable">
+                                  <TR>
+                                    <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                                    <TH ROWSPAN=2 class="modalhead">APELLIDO </TH>
+                                    <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                                    <TH ROWSPAN=2 class="modalhead">DIRECCION</TH>
+                                    <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">CORREO</TH>
+                                    <TH ROWSPAN=2 class="modalhead">FECHA REGISTRO</TH>
+
+                                  </TR>
+                                  <TR></TR>
+                                  <TR>
+                                            <TD >00001</TD><TD onclick="seleccionarClientetd1()">IRVIN</TD> <TD>ALVAREZ  </TD> <TD>56987412-0</TD> <TD>SAN MIGUEL 2 AVE SUR #606 BARRIO EL CALVARIO</TD> <TD>6985-1568</TD><TD>TEST@TEST.COM</TD><TD>2017-04-20</TD>
+
+                                  </TR>
+                                  <TR>
+                                          <TD>00002</TD><TD onclick="seleccionarClientetd2()">ALONSO </TD><TD>RIVAS</TD> <TD>18462159-6</TD> <TD>MONCAGUA 2 AVE NORTE #95 BARRIO CONCEPCION</TD> <TD>7458-6255</TD><TD>TEST@TEST.COM</TD><TD>2017-04-29</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00003</TD><TD onclick="seleccionarClientetd3()">ISABEL </TD> <TD>SANCHEZ</TD> <TD>78936561-4</TD> <TD>SAN MIGUEL 3 CALLE PONIENTE #98 </TD> <TD>7518-9532</TD><TD>TEST@TEST.COM</TD><TD>2017-03-22</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00004</TD><TD onclick="seleccionarClientetd4()">ANGELLY</TD> <TD>HERNADEZ</TD> <TD>84562848-4 </TD> <TD>BERLIN 1 AVE NORTE #95 BARRIO EL CENTRO</TD> <TD>6985-1548</TD><TD>TEST@TEST.COM</TD><TD>2017-02-20</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00005</TD><TD onclick="seleccionarClientetd5()">DANILO  </TD> <TD>JOYA</TD> <TD>12548429-5</TD> <TD>SAN SALVADOR 25 AVE NORTE #651 </TD> <TD>7120-9415</TD><TD>TEST@TEST.COM</TD><TD>2017-04-15</TD>
+                                  </TR>
+                                  <TR>
+                                          <TD>00006</TD><TD onclick="seleccionarClientetd6()">JOSE  </TD> <TD> GARCIA </TD> <TD>16589545-7</TD> <TD>NUEVA GUADALUPE 3 CALLE ORIENTE #654 </TD> <TD>6495-3261</TD><TD>TEST@TEST.COM</TD><TD>2017-04-10</TD>
+                                  </TR>
+
+                                 </TABLE>
+                                   </div>
+
+                                 </div>
+                               </td>
+
+                             </tr>
+                             <tr>
+                               <td>NOMBRE MASCOTA<span class="requerido">*</span></td>
+                               <td><input type="text" id="nombreMascota" pattern="[A-Za-z]{1,50}" placeholder="ingrese el nombre de mascota" maxlength="50" disabled required></td><td>  <a id="modalMascota" onclick="mostrarMascota()" hidden="true">SELECCIONAR </a>
+
+                                 <!-- The Modal -->
+                                 <div id="myModalMascotas" class="modal">
+
+                                   <!-- Modal content -->
+                                   <div class="modal-content">
+                                     <span class="close"  onclick="cerrarMascota()">&times;</span>
+                                     <TABLE class="modaltable">
+                                     <TR>
+                                     <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                                     <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                                     <TH ROWSPAN=2 class="modalhead">CLIENTE </TH>
+                                     <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                                     <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+                                     <TH ROWSPAN=2 class="modalhead">RAZA</TH>
+                                     <TH ROWSPAN=2 class="modalhead">SEXO</TH>
+                                       <TH ROWSPAN=2 class="modalhead">FOTO</TH>
+                                     <TH ROWSPAN=2 class="modalhead">FECHA INGRESO</TH>
+                                      <TH ROWSPAN=2 class="modalhead">FECHA DECESO</TH>
+
+                                     </TR>
+                                     <TR></TR>
+                                     <TR>
+                                            <TD>00001</TD><TD onclick="seleccionarMascotatd1()">FLINSTONE</TD> <TD>IRVIN  </TD> <TD>6985-1568</TD> <TD>CANINO</TD> <TD>PASTOR ALEMAN</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-20</TD><TD>2018-04-20</TD>
+
+                                     </TR>
+                                     <TR>
+                                          <TD>00002</TD><TD onclick="seleccionarMascotatd2()">BUDDY </TD><TD>ALONSO </TD> <TD>7458-6255</TD> <TD>CANINO</TD> <TD>COMUN</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-29</TD><TD></TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00003</TD><TD onclick="seleccionarMascotatd3()">MISSY </TD> <TD>ISABEL</TD> <TD>7518-9532</TD> <TD>CANINO</TD> <TD>HUSKY</TD><TD>FEMENINO</TD><TD></TD><TD>2017-03-22</TD><TD></TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00004</TD><TD onclick="seleccionarMascotatd4();">FERN</TD> <TD>ANGELLY</TD> <TD>6985-1548 </TD> <TD>CANINO</TD> <TD>POODLE</TD><TD>FEMENINO</TD><TD></TD><TD>2017-02-20</TD><TD>2019-04-20</TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00005</TD><TD onclick="seleccionarMascotatd5()">FLASH </TD> <TD>DANILO </TD> <TD>712548429-5</TD> <TD>CANINO</TD> <TD>GREYHOUND</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-15</TD><TD></TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00006</TD><TD onclick="seleccionarMascotatd6()">AURA  </TD> <TD> JOSE  </TD> <TD>6495-3261</TD> <TD>FELINO</TD> <TD>RAGDOLL</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-10</TD><TD></TD>
+                                     </TR>
+
+                                     </TABLE>
+                                   </div>
+
+                                 </div>
+                               </td>
+
+                             </tr>
+     						 <tr>
+                   <td>RAZA<span class="requerido">*</span></td>
+                   <td><input type="text" id="raza" pattern="[A-Za-z\s]{1,50}" maxlength="50" placeholder="ingrese la raza"disabled required></td><td>  <a id="modalRaza" onclick="mostrarRaza()" hidden="true">SELECCIONAR </a>
+
+                     <!-- The Modal -->
+                     <div id="myModalRaza" class="modal">
+
+                       <!-- Modal content -->
+                       <div class="modal-content">
+                         <span class="close"  onclick="cerrarRaza()">&times;</span>
+                         <TABLE class="modaltable">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO </TH>
+                        <TH ROWSPAN=2 class="modalhead">RAZA </TH>
+
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD> <TD onclick="seleccionarRazatd1()">PASTOR ALEMAN  </TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002 </TD><TD onclick="seleccionarRazatd2()">COMUN</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003 </TD> <TD onclick="seleccionarRazatd3()">HUSKY</TD>
+                      </TR>
+                      <TR>
+                              <TD>00004</TD> <TD onclick="seleccionarRazatd4()">POODLE</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005  </TD> <TD onclick="seleccionarRazatd5()">RAGDOLL</TD>
+                      </TR>
+                      <TR>
+                              <TD>00006  </TD> <TD onclick="seleccionarRazatd6()"> MAINE COON </TD>
+                      </TR>
+
+                     </TABLE>
+                       </div>
+
+                     </div>
+                   </td>
+     								</tr>
+
+     						 <tr>
+                   <td>ESPECIE<span class="requerido">*</span></td>
+                  <td><input type="text" id="especie" pattern="[A-Za-z]{1,50}" maxlength="50" disabled placeholder="ingrese la especie"required></td><td>  <a id="modalEspecie" onclick="mostrarEspecie()" hidden="true">SELECCIONAR </a>
+
+                     <!-- The Modal -->
+                     <div id="myModalEspecie" class="modal">
+
+                       <!-- Modal content -->
+                       <div class="modal-content">
+                         <span class="close"  onclick="cerrarEspecie()">&times;</span>
+                         <TABLE class="modaltable">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO </TH>
+                        <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD> <TD onclick="seleccionarEspecietd1()">CANINO  </TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002 </TD><TD onclick="seleccionarEspecietd2()">FELINO</TD>
+                            </TR>
+                      <TR>
+                              <TD>00003 </TD> <TD onclick="seleccionarClientetd3()">AVIAR</TD>
+                      </TR>
+                      <TR>
+                              <TD>00004</TD> <TD onclick="seleccionarEspecietd4()">PEZ</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005</TD> <TD onclick="seleccionarEspecietd5()">REPTIL</TD>
+                      </TR>
+                     </TABLE>
+                       </div>
+
+                     </div>
+                   </td>
+                                 </tr>
+                                 <tr>
+                                 <td>DESCRIPCION</td>
+                                 <td><textarea id="id_txt_descripcion" rows="4" cols="21" pattern="[A-Za-z\s]{1,300}" placeholder="ingrese descripcion de proceso" maxlength="300" disabled></textarea></td>
+                             </tr>
+                             <tr>
+                               <td>DIAGNOSTICO </td>
+                               <td><textarea id="id_txt_diagnostico" rows="4" cols="21" pattern="[A-Za-z\s]{1,150}" maxlength="150" placeholder="ingrese diagnostico del paciente"disabled></textarea></td>
+                           </tr>
+                             </tr>
+     						<tr>
+                  <td>VETERINARIO<span class="requerido">*</span></td>
+                  <td><input type="text" id="veterinario" pattern="[A-Za-z]{1,50}" maxlegth="50" disabled placeholder="ingrese el veterinario" required></td>
+                  <td>  <a id="modalVeterinario" onclick="mostrarVeterinario()" hidden="true">SELECCIONAR </a>
+
+                    <!-- The Modal -->
+                    <div id="myModalVeterinario" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <span class="close"  onclick="cerrarVeterinario()">&times;</span>
+                        <TABLE class="modaltable">
+                     <TR>
+                       <TH ROWSPAN=2 class="modalhead">NOMBRE</TH>
+                       <TH ROWSPAN=2 class="modalhead">APELLIDO</TH>
+                       <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                       <TH ROWSPAN=2 class="modalhead">NIT</TH>
+                       <TH ROWSPAN=2 class="modalhead">FECHA CONTRATACION</TH>
+                       <TH ROWSPAN=2 class="modalhead">FOTO</TH>
+                       <TH ROWSPAN=2 class="modalhead">SEXO</TH>
+                       <TH ROWSPAN=2 class="modalhead">ESPECIALIDAD</TH>
+                       <TH ROWSPAN=2 class="modalhead">ESTADO</TH>
+
+                     </TR>
+                      <tr></tr>
+                     <TR>
+                          <TD onclick="seleccionarVettd1()">OSCAR </TD>
+                          <TD>ROMERO </TD>
+                          <TD>83748393-9</TD>
+                          <TD>4783-021092-384-1</TD>
+                          <TD>2017-01-02</TD>
+                          <TD><img src="../../imagenes/iconoFemenino.png" width="48" height="48"></TD>
+                          <TD>Masculino</TD>
+                          <TD>MAYORES</TD>
+                          <TD>Activo</TD>
+                     </TR>
+                     <TR>
+                          <TD onclick="seleccionarVettd2()">ANGELLY</TD>
+                          <TD>RIVAS</TD>
+                          <TD>38493434-2</TD>
+                          <TD>4839-110291-383-3</TD>
+                          <TD>2016-10-03</TD>
+                          <TD><img src="../../imagenes/iconoMasculino.png" width="48" height="48"></TD>
+                          <TD>Masculino</TD>
+                          <TD>MENORES</TD>
+                          <TD>Activo</TD>
+                     </TR>
+
+
+                    </TABLE>
+                      </div>
+
+                    </div>
+                  </td>
+
+                             </tr>
+
+                         </table>
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO </TH>
+                        <TH ROWSPAN=2 class="modalhead">NOMBRE CLIENTE </TH>
+                        <TH ROWSPAN=2 class="modalhead">NOMBRE MASCOTA</TH>
+                        <TH ROWSPAN=2 class="modalhead">RAZA</TH>
+                        <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+                        <TH ROWSPAN=2 class="modalhead">DESCRIPCION</TH>
+                        <TH ROWSPAN=2 class="modalhead">DIAGNOSTICO</TH>
+                        <TH ROWSPAN=2 class="modalhead">NOMBRE VETERINARIO</TH>
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                            <TD>00001</TD> <TD>IRVIN </TD> <TD>FLINSTONE</TD> <TD>PASTOR ALEMAN</TD> <TD>CANINO</TD><TD></TD><TD></TD><TD>JOSE</TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002 </TD><TD>ALONSO</TD> <TD>BUDDY</TD> <TD>COMUN</TD> <TD>CANINO</TD><TD></TD><TD></TD><TD>JUAN</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003 </TD> <TD>ISABEL</TD> <TD>MISSY</TD> <TD>HUSKY</TD> <TD>CANIMO</TD><TD></TD><TD></TD><TD>JULIO</TD>
+                      </TR>
+                      <TR>
+                              <TD>00004</TD> <TD>ANGELLY</TD> <TD>FERN </TD> <TD>POODLE</TD> <TD>CANINO</TD><TD></TD><TD></TD><TD>ERNESTO</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005 </TD> <TD>DANILO</TD> <TD>FLASH</TD> <TD>GREYHOUND</TD> <TD>CANINO</TD><TD></TD><TD></TD><TD>CARLOS</TD>
+                      </TR>
+                      <TR>
+                              <TD>00006  </TD> <TD> JOSE  </TD> <TD>AURA</TD> <TD>RAGDOLL</TD> <TD>FELINO</TD><TD></TD><TD></TD><TD>JUAN</TD>
+                      </TR>
+                      <TR>
+                              <TD>00007  </TD> <TD> MIGUEL </TD> <TD>JAZZY</TD> <TD>MAINE COON</TD> <TD>FELINO</TD><TD></TD><TD></TD><TD>JOSE</TD>
+                      </TR>
+                      <TR>
+                               <TD>00008  </TD> <TD>LUIS </TD> <TD>FUJI</TD> <TD>AKITA</TD> <TD>CANINO</TD><TD></TD><TD></TD><TD>ERNESTO</TD>
+                      </TR>
+                      <TR>
+                              <TD>00009  </TD> <TD>WILLIAM</TD> <TD>GOLDY</TD> <TD>GOLDEN FISH</TD> <TD>PEZ</TD><TD></TD><TD></TD><TD>CARLOS</TD>
+                      </TR>
+                      <TR>
+                              <TD>00010  </TD> <TD>LAURA </TD> <TD>TANNER </TD> <TD>PITBULL</TD> <TD>CANINO</TD><TD></TD><TD></TD><TD>PEDRO</TD>
+                      </TR>
+                      <TR>
+                              <TD>00011 </TD> <TD>ANA </TD> <TD>JIVE</TD> <TD>PERICO</TD> <TD>AVIAR</TD><TD></TD><TD></TD><TD>JUAN</TD>
+                      </TR>
+
+                     </TABLE>
+                     </fieldset>
+                   </form>
+
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

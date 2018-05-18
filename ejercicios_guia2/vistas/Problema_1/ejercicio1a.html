@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset ="utf-8">
+<meta name ="description" content ="Ejercicio 1a desafio 2">
+<meta name="keywords" content ="HTML5, CSS3, JavaScript, UNIVO">
+<title>Ejercicio 1 a rotacion 3D</title>
+<link rel="stylesheet" href="../../css/ejercicio1a.css"></link>
+<script src="../../js/ejercicio1a.js"></script>
+</head>
+<center>
+<div>
+<img src="../../imagenes/BOTW.png" class="clsImagen" id="id_img">
+</div>
+</center>
+<center>
+<table style= " border: 1px solid black">
+<br><br><br>
+<tr>
+<th>Rotacion de imagen 3D </th>
+</tr>
+<tr>
+<td><label>Rotacion Eje x </label></td>
+
+</tr>
+<tr>
+<td><input id="id_x" type="range" min="0" max="300" value="0" step="100" onchange="showValuex(this.value)"/></td>
+<td><span id="rangex">0</span></td>
+</tr>
+<tr>
+<td><label>Rotacion Eje y </label></td>
+</tr>
+<tr>
+<td><input id="id_y" type="range" min="0" max="300" value="0" step="100" onchange="showValuey(this.value)"/></td>
+<td><span id="rangey">0</span></td>
+</tr>
+<tr>
+<td><label>Rotacion Eje z </label></td>
+</tr>
+<tr>
+<td><input id="id_z" type="range" min="0" max="300" value="0" step="100" onchange="showValuez(this.value)" /></td>
+<td><span id="rangez">0</span><br></td>
+</tr>
+</table>
+</center>
+</html>

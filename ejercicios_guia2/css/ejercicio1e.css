@@ -1,0 +1,32 @@
+body{
+background-color : #0081cf;
+color:#FFCF40;
+}
+div{
+	 margin: auto;
+     width: auto%;
+     height: auto%;
+     border-collapse: collapse;
+	
+	
+   
+}
+.clsImagen{
+	 width: 100px;
+    height:100px;
+	 transition: width 0s;
+	 transition: height 0s;
+}
+.clsImagen:hover {
+	
+    width: 500px;
+	height:500px;
+}
+table{
+	 border: 1px solid black;
+	 position: relative;
+	 top:80%;
+	 left:10px;
+	 width:30%;
+	height:7%;
+}

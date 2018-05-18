@@ -1,0 +1,27 @@
+.efecto_texto_3D{
+	text-shadow: 1px 1px 0px #333,
+	2px 2px 0px #333,
+	3px 3px 0px #333,
+	4px 4px 0px #333,
+	5px 5px 0px #333,
+	6px 6px 0px #333,
+	7px 7px 0px #333,
+	8px 8px 0px #333,
+	9px 9px 0px #333,
+	11px 11px 10px #000;
+	font-size:100px;
+	color:blue;
+}
+.efecto_texto_FUEGO{
+	text-shadow: 0px 0px 10px #fff,
+	/*PARTE DE LUZ*/
+	4px 2px 12px #DCB500,
+	-4px 2px 12px #DCB500,
+	/*SUBIDA DEL FUEGO*/
+	0px -6px 14px #FF7A00,
+	0px -12px 14px #FF6300,
+	0px -20px 14px #FF4400,
+	/*AZUELO DE LA LLAMA*/
+	0px -30px 14px #0A7BFF;
+	font-size:100px;
+}

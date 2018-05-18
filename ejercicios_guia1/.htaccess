@@ -1,0 +1,11 @@
+Options -Indexes
+ErrorDocument 403 /vistas/403.html
+ErrorDocument 404 /vistas/404.html
+# no nasty crackers in here!
+#order deny,allow
+#deny from all
+#allow from 192.168.1.1/24
+#SetEnv SITE_WEBMASTER "Alumnos UNIVO"
+#SetEnv SITE_WEBMASTER_URI mailto:leonardo.univo@gmail.com 
+	
+UnSetEnv REMOTE_ADDR 

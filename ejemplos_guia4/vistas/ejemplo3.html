@@ -1,0 +1,50 @@
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Validacion de Formularios: Validar DUI</title>
+<link rel="stylesheet" href="../recursos/css/estilo.css">
+<script>
+function iniciar()
+{
+	document.getElementById("informacion").addEventListener("invalid", validacion, true);
+	document.getElementById("informacion").addEventListener("input", controlar, false);
+}
+
+function controlar(e)
+{
+	var elemento=e.target;
+	if (elemento.validity.valid) 
+		{
+			elemento.classList.remove('css_error_input');
+			elemento.classList.add('css_ok_input');
+		}
+
+	else
+		{
+			elemento.classList.add('css_error_input')
+		}
+}
+
+function validacion(e)
+{
+	var elemento=e.target;
+	elemento.classList.add('css_error_input')
+}
+
+window.addEventListener("load", iniciar, false);
+</script>
+</head>
+<body>
+	<section>
+		<form id="informacion" name="informacion" method="get">
+			<label for="input1">Ingresar DUI (Formato ########-#):</label> <input type="text" name="input1" id="input1" pattern= "^\d{8}-\d{1}$" required><br>
+        	<label for="input2">Ingresar NIT (Formato ####-######-###-#):</label> <input type="text"name="input2" id="input2" pattern= "^[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]{1}$" required><br>
+       		<label for="input3">Placa de carro particular (Formato: P ######)</label> <input type="text"name="input3" id="input3" pattern= "^P?\s{1}\d{1,6}$" required><br>
+	    	<label for="input4">Placa de carro nacional (Formato: N ######)</label> <input type="text"name="input4" id="input4" pattern= "^N?\s{1}\d{1,6}$"
+	    	required><br>
+	    	<label for="input5">Placa de autobus (Formato: AB ######):</label> <input type="text"name="input5" id="input5" pattern= "^AB?\s{1}\d{1,6}$" required><br>
+	    	<input type="submit" id ="enviar" value= "REGISTRAR">
+		</form>
+	</section>
+</body>
+</html>

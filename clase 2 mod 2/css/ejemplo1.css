@@ -1,0 +1,60 @@
+a[href="http://www.facebook.com/"]
+{
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 18px;
+color: #5858FA;
+text-align: justify;
+letter-spacing: 0.5px;
+}
+a[href*="twitter"]
+{
+font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+font-size: 18px;
+color: #81DAF5;
+text-align: center;
+letter-spacing: 1.0px;
+}
+a[href^="goo"]
+{
+font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+font-size: 18px;
+color: #F79F81;
+text-align: justify;
+letter-spacing: 0.5px;
+}
+a[href$="php"]
+{
+font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+font-size: 18px;
+color: #9F81F7;
+text-align: center;
+letter-spacing: 1.0px;
+}
+a:link
+{
+font-weight: bold;
+text-decoration: none;
+}
+a:visited
+{
+	font-size: 18px;
+	text-decoration: underline;
+}
+a:hover
+{
+	background-color: #EFEFFB;
+	font-size: 18px;
+	text-shadow: grey 1px 1px;
+}
+a:active
+{
+background-color: yellow;
+font-size: 18px;
+text-shadow:grey 1px 1px;
+text-decoration: underline;
+}
+
+
+
+
+

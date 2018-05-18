@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/empleados.css">
+    <script type="text/javascript" src="../../js/validacionEmpleados.js"></script>
+    <title>REGISTRO DE EMPLEADOS</title>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>REGISTRO EMPLEADOS</h1>
+        </header>
+
+        <menu>
+
+          <h3>MENU</h3>
+          <ul>
+            <li><a href="empleados.html">REGISTRO EMPLEADOS</a></li>
+            <li><a href="clientes.html">REGISTRO CLIENTES</a></li>
+            <li><a href="vehiculos.html">REGISTRO VEHICULOS</a></li>
+            <li><a href="reporteClientes.html">REPORTE CLIENTES</a></li>
+			<li><a href="reporteEmpleados.html">REPORTE EMPLEADOS</a></li>
+            <li><a href="reporteVehiculos.html">REPORTE VEHICULOS</a></li>
+			<li><a href="about.html">ACERCA DE</a></li>
+          </ul>
+        </menu>
+		  <div class="panel">
+            <form Id="Rempleados" method="get">
+                <fieldset>
+                  <legend>REGISTRO DE EMPLEADOS</legend>
+                    <table>
+                        <tr>
+                            <td>CODIGO<span class="requerido">*</span></td>
+                            <td><input type="text" id="codigo" pattern= "^[0-9]{4}" maxlength="4" disabled required></td>
+                           
+                        </tr>
+                        <tr>
+                          <td>NOMBRE<span class="requerido">*</span></td>
+                          <td><input type="text" id="nombre" pattern="[A-Za-z]{1,20}" maxlength="20" disabled required></td>
+                         
+                        </tr>
+                        <tr>
+                          <td>APELLIDO<span class="requerido">*</span></td>
+                          <td><input type="text" id="apellido" pattern="[A-Za-z]{1,20}" disabled required></td>
+                          
+                        </tr>
+						 <tr>
+								<td class="clsFilas">SEXO</td>
+		
+							<td><select id="id_cmb_sexo" disabled required>
+								<option value="1">FEMENINO</option>
+								<option value="2">MASCULINO</option>
+								</select></td>
+								</tr>
+                        <tr>
+						 <tr>
+                          <td class="clsFilas">FOTOGRAFIA<span class="requerido">*</span></td>
+		
+                          <td> <input type="file" id="pic" accept="image/*" disabled riquired>
+							
+                            </tr>
+							<tr>
+                          <td class="clsFilas">CURRICULUM<span class="requerido">*</span></td>
+		
+                          <td> <input type="file" id="curriculum" accept=".doc, .docx,.pdf" disabled riquired>
+							
+                            </tr>
+                            <td>DIRECCION</td>
+                            <td><textarea id="id_txt_direccion" rows="4" cols="21" pattern="[A-Za-z\s]{1,60}" maxlength="60" disabled></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>DUI<span class="requerido">*</span></td>
+                            <td><input type="text" id="DUI" pattern= "^\d{8}-\d{1}$" maxlength="10" disabled required></td>
+                           
+                        </tr>
+						<tr>
+                            <td>NIT<span class="requerido">*</span></td>
+                            <td><input type="text" id="NIT"pattern= "^[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]{1}$" maxlength="17"disabled required></td>
+                           
+                        </tr>
+						<tr>
+                            <td>ISSS<span class="requerido">*</span></td>
+                            <td><input type="text" id="ISSS" pattern="^[0-9]{9}$" maxlength="9" disabled required></td>
+                            
+                        </tr>
+						<tr>
+                            <td>NUP<span class="requerido">*</span></td>
+                            <td><input type="text" id="NUP" pattern="^[0-9]{12}$" maxlength="12" disabled required></td>
+                          
+                        </tr>
+						
+                        <tr>
+                          <td>EMAIL</td>
+                          <td><input type="email"disabled id="correo"></td>
+                        </tr>
+                        <tr>
+                          <td>TELEFONO</td>
+                          <td><input type="text" id="telefono" pattern= "^[2]{1}[0-9]{3}-[0-9]{4}$" maxlength="9" disabled>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>CELULAR</td>
+                          <td><input type="text" id="celular" pattern= "^[6-7]{1}[0-9]{3}-[0-9]{4}$" maxlength="9" disabled></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+
+        <nav>
+            <ul>
+                <li><button name="nuevo" id="nuevo"><img src="../../imagenes/new.png" alt=""> NUEVO REGISTRO</button></li>
+                <li><button name="modificar" id="modificar"disabled><img src="../../imagenes/edit.png" alt="" > MODIFICAR</button></li>
+                <li><button name="eliminar" id="eliminar"disabled><img src="../../imagenes/delete.png" alt="" > ELIMINAR</button></li>
+                <li><button name="guardar" id="guardar" disabled><img src="../../imagenes/guardar.png" alt="">GUARDAR</button></li>
+                <li><button name="cancelar" id="cancelar"disabled><img src="../../imagenes/cancel.png" alt=""> CANCELAR</button></li>
+				<li><button name="cargar" id="cargar"><img src="../../imagenes/cargar.png" alt=""> CARGAR</button></li>
+            </ul>
+        </nav>
+
+      
+
+        <footer><p>Copyright (©) 2017 TODOS LOS DERECHOS RESERVADOS.</p></footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo 3</title>
+	<link rel="stylesheet" href="../recursos/css/ejemplo3.css">
+	<script src="../recursos/js/ejemplo3.js"></script>
+</head>
+<body>
+<div id="id_div_formulario">
+<fieldset class="css_legend">
+<legend class="css_legend">INFORMACION PERSONAL</legend>
+<table border="0" width="100%">
+	<tr>
+		<td>DUI</td>
+		<td><input type="text" name="dui" id="dui" class="css_dui" maxlength="10" style="width: 90%;"></td>
+		<td>NIT</td>
+		<td><input type="text" name="nit" id="nit" class="css_nit" maxlength="17" style="width: 90%;"></td>
+	</tr>
+	<tr>
+		<td>PRIMER APELLIDO</td>
+		<td><input type="text" name="papellido" id="papellido" style="width: 90%;"></td>
+		<td>SEGUNDO APELLIDO</td>
+		<td><input type="text" name="sapellido" id="sapellido" style="width: 90%;"></td>
+	</tr>
+	<tr>
+		<td>NOMBRES:</td>
+		<td colspan="3"> <input type="text" name="nombres" id="nombres" style="width: 96.5%;"></td>
+	</tr>
+	<tr>
+		<td>SEXO:</td>
+		<td>
+			<input type="radio" name="sexo" value="m"><label for="sexo">Masculino</label><br>
+			<input type="radio" name="sexo" value="f"><label for="sexo">Femenino</label><br>
+		</td>
+		<td>TELEFONO</td>
+		<td><input type="text" name="telefono" id="telefono" maxlength="9" style="width: 90%;"></td>
+	</tr>
+	<tr>
+		<td>RESIDENCIA:</td>
+		<td colspan="3"><textarea name="residencia" id="residencia" class="css_residencia"></textarea>
+	</tr>
+	<tr>
+		<td>TEMAS INTERES:</td>
+		<td colspan="3">
+			<input type="checkbox" name="temas" id="temas_1" value="tv"><label for="temas">TV</label>
+			<input type="checkbox" name="temas" id="temas_2" value="libros"><label for="temas">LIBROS</label>
+			<input type="checkbox" name="temas" id="temas_3" value="musica"><label for="temas">MUSICA</label>
+			<input type="checkbox" name="temas" id="temas_4" value="otros"><label for="temas">OTROS</label>
+			<input type="checkbox" name="temas" id="temas_5" value="peliculas"><label for="temas">PELICULAS</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" style="text-align: center;">
+			<button onclick="agregar();">AGREGAR</button>
+			<button onclick="modificar();">MODIFICAR</button>
+			<button onclick="eliminar();">ELIMINAR</button>
+			<button onclick="guardar();">GUARDAR</button>
+			<button onclick="cancelar();">CANCELAR</button>
+		</td>
+	</tr>
+</table>
+</fieldset>
+</div>
+</body>
+</html>

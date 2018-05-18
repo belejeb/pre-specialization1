@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+<meta charset=""utf-8">
+<title>Validacion de Formularios: Tarjetas de Credito o Debito</title>
+<link rel="stylesheet" href="../recursos/css/estilo.css">
+<script>
+function iniciar()
+{
+	document.getElementById("informacion").addEventListener("invalid", validacion, true);
+	document.getElementById("informacion").addEventListener("input", controlar, false);
+}
+
+function controlar(e)
+{
+ var elemento=e.target;
+ if(elemento.validity.valid)
+{
+  elemento.classList.remove('css_error_input');
+  elemento.classList.add('css_ok_input');
+
+} 
+else
+{
+	elemento.classList.add('css_error_input');
+  }
+}
+
+function validacion(e)
+{
+   var elemento=e.target;
+   elemento.classList.add('cs_error_input');
+}
+window.addEventListener("load",iniciar,false);
+</script>
+</head>
+<body>
+    <section>
+	   <form id="informacion" name="informacion" method="get">
+		<label for="input1">Ingresar Tarjeta de Credito (Formato ####-####-####-####):</label><input type="text" name="input1" id="input1" pattern="^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$" required><br>
+       <label for="input2">Ingresar Tarjeta de Debito (Formato ####-####-####-####):</label><input type="text" name="input2" id="input2" pattern="^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$" required><br>
+	    <input type="submit" id ="enviar" value= "REGISTRAR">
+    </form>
+ </section>
+</body>
+</html>

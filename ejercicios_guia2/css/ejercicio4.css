@@ -1,0 +1,36 @@
+table TD, table TH{
+ 
+  border:1px solid black;
+  margin: auto;
+  width: 40%;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+TABLE{
+	border-radius: 5px;
+    border: 1px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow: 10px 10px 5px #808080;
+   margin: auto;
+  width: 40%;
+  height: auto;
+
+  text-align: center;
+}
+.clsAlumnos,.clsTareas,.clsPreParcial,.clsParcial,.clsT1,.clsT2,.clsPromedio
+{
+	  width: 40%;
+	height:40px;
+	color:#ffffff;
+	background-color:#808080;
+}
+tr:nth-child(2n-2){
+	
+	background-color:#9cc2e5;
+}
+tr:nth-child(2n-1){
+	
+	background-color:#deeaf6;
+}

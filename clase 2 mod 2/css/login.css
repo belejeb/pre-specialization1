@@ -1,0 +1,47 @@
+h1
+{
+	color: #1c1c1c;
+	font-family: arial, Helvetica;
+	font-size: 22px;
+	letter-spacing: 0.5;
+	text-shadow: grey 5px 5px 10px;
+	text-align: center;
+}
+span
+{
+	color: #1c1c1c;
+	font-family: arial, Helvetica;
+	font-size: 18px;
+	letter-spacing: 0.5;
+	text-transform: uppercase;
+	text-align: justify;
+	font-weight: bold;
+}
+.panel_login
+{
+	border: 5px double black;
+	position: fixed;
+	top: 10%;
+	left: 37%;
+	width: 25%;
+	height: 45%;
+	background: radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	background: -moz-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+	padding-left: 25px;
+	border-radius: 15px;
+}
+.input_requerido
+{
+	border:2px solid red;
+	background-color: #FA5858;
+	color: white;
+	font-weight: bold;
+}
+.input_ok
+{
+	border: 2px solid green;
+	background-color: #BCF5A9;
+	color: black;
+	font-weight: bold;
+}

@@ -1,0 +1,144 @@
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.modaltable TD, table TH ,.modaltable TR{
+
+  border:1.5px solid black;
+  margin: auto;
+  width: auto;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0px;
+}
+.modaltable td:hover {
+	background-color:#56b6e2;
+}
+.modaltable{
+	border-radius: 5px;
+    border: 1.5px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow: 10px 10px 5px #404040;
+   margin: auto;
+  width: auto;
+  height: auto;
+  text-shadow: none;
+  color: #000;
+  text-align: center;
+}
+
+.modaltableinner{
+	border-radius: 5px;
+    border: 1.5px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow: 10px 10px 5px #404040;
+   margin: auto;
+  width: 1200px;
+  height: auto;
+  text-shadow: none;
+  color: #000;
+  text-align: center;
+}
+
+.modaltableinner TD, table TH ,.modaltableinner TR{
+
+  border:1.5px solid black;
+  margin: auto;
+  width: auto;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0px;
+}
+.modaltableinner td:hover {
+	background-color:#56b6e2;
+}
+
+.modalhead
+{
+	width: 150px ;
+	height:40px;
+	color:#000000;
+	background-color:#01BCF3;
+}
+
+.modaltableinner tr:nth-child(2n-2){
+
+	background-color:#93e3f9;
+}
+.modaltableinner tr:nth-child(2n-1){
+
+	background-color:#02f2c6;
+}
+
+.modaltable{
+	border-radius: 5px;
+    border: 1.5px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow: 10px 10px 5px #404040;
+   margin: auto;
+  width: auto;
+  height: auto;
+  text-shadow: none;
+  color: #000;
+  text-align: center;
+}
+
+.modalhead
+{
+	width: 150px ;
+	height:40px;
+	color:#000000;
+	background-color:#01BCF3;
+}
+
+.modaltable tr:nth-child(2n-2){
+
+	background-color:#93e3f9;
+}
+.modaltable tr:nth-child(2n-1){
+
+	background-color:#02f2c6;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/ejercicio3.css">
+    <script type="text/javascript" src="../../js/validarProductos.js"></script>
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>Registro de Electrodomesticos</h1>
+        </header>
+
+        <menu>
+
+            <h3>MENU</h3>
+            <ul>
+               
+                <li><a href="electrodomesticosVendedor.html">Electrodomésticos</a></li>
+                <li><a href="clientesVendedor.html">Clientes</a></li>
+             
+            </ul>
+        </menu>
+
+        <nav>
+            <ul>
+                <li><button name="nuevo"><img src="../../imagenes/nuevo-usuario.png" alt=""></button></li>
+                <li><button name="modificar"><img src="../../imagenes/edit-profile.png" alt=""></button></li>
+                <li><button name="eliminar"><img src="../../imagenes/delete-user.png" alt=""></button></li>
+                <li><button name="guardar" onclick="validarProductos()"><img src="../../imagenes/guardar.png" alt=""></button></li>
+                <li><button name="cancelar"><img src="../../imagenes/cancel.png" alt=""></button></li>
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <form action="#">
+                <fieldset>
+                    <legend>REGISTRO DE ELECTRODOMESTICOS</legend>
+                    <table>
+                        <tr>
+                            <td>CODIGO<span class="requerido">*</span></td>
+                            <td><input type="text" id="codigo"></td>
+                              <td><div class="error" id="mensaje1">Ingresa el código</div></td>
+                        </tr>
+                        <tr>
+                            <td>PRODUCTO<span class="requerido">*</span></td>
+                            <td><input type="text" id="producto"></td>
+                            <td><div class="error" id="mensaje2">Ingresa el nombre del producto</div></td>
+                        </tr>
+                        <tr>
+                            <td>PROVEEDOR<span class="requerido">*</span></td>
+                            <td><select>
+                                    <option>SAMSUNG</option>
+                                    <option>SONY</option>
+									 <option>LG</option>
+									  <option>MABE</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>STOCK<span class="requerido">*</span></td>
+                            <td><input type="text" id="stock"></td>
+                            <td><div class="error" id="mensaje3">Ingresa el stock</div></td>
+                        </tr>
+                        <tr>
+                            <td>STOCK MINIMO<span class="requerido">*</span></td>
+                            <td><input type="text" id="stockMinimo"></td>
+                            <td><div class="error" id="mensaje4">Ingresa el stock minimo</div></td>
+                        </tr>
+                        <tr>
+                            <td>PRECIO COMPRA<span class="requerido">*</span></td>
+                            <td><input type="text" id="precioCompra"></td>
+                            <td><div class="error" id="mensaje5">Ingresa el precio de compra</div></td>
+                        </tr>
+                        <tr>
+                            <td>PRECIO VENTA<span class="requerido">*</span></td>
+                            <td><input type="text" id="precioVenta"></td>
+                            <td><div class="error" id="mensaje6">Ingresa el precio de venta</div></td>
+                        </tr>
+                        <tr>
+                            <td>DESCRIPCION</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+
+        <footer>
+            <p>Copyright (c) 2017 TODOS LOS DERECHOS RESERVADOS.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

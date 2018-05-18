@@ -1,0 +1,20 @@
+body
+{
+background-color: #E0ECF8;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #070B19;
+}
+.css_error_input
+{
+ background-color: #F8E0E0;
+ color: black;
+ border: 2px solid #B40404;
+ border-radius: 3px
+}
+.css_ok_input
+{
+ background-color: #3af268;
+ color: black;
+ border: 2px solid #0B6121;
+ border-radius: 3px
+}

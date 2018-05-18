@@ -1,0 +1,49 @@
+body {font-family: "Lato", sans-serif;}
+
+div.tab{
+	overflow: hidden;
+	border: 0px solid #ccc;
+	background-color: #f1f1f1;
+	border-radius: 10px 10px 0px 0px;
+	background: #ffaf4b;
+	background: -moz-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffaf4b), color-stop(100%, #ff920a));
+	background: -webkit-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+}
+
+div.tab img{
+	border: 0px solid black;
+	padding-right: 5px;
+}
+
+div.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.7s;
+	font-size: 17px;
+	border-radius: 10px 10px 0px 0px;
+	font-weight: bold;
+}
+
+div.tab button:hover {
+	background: #b7deed;
+}
+
+div.tab button.active {
+	background: #b7deed;
+	background: -moz-linear-gradient(top, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+	background: -webkit-linear-gradient(top, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+}
+
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 0px 0px 10px 10px;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset ="utf-8">
+<meta name ="description" content ="Primer ejercicio del desafio numero 1">
+<meta name="keywords" content ="HTML5, CSS3, JavaScript, UNIVO">
+<title>Primer ejercicio desafio 1</title>
+<script src ="../js/ejercicio1.js"></script>
+<link rel="stylesheet" href ="../css/ejercicio1.css"></link>
+</head>
+<body>
+ <h1>CALCULADORA IMC</h1>
+
+  <form action="#">
+    <table class="tblSalidaDatos">
+      <tr>
+        <td colspan="2" class="clsCabecera">CALCULADORA IMC</td>
+        <td rowspan="12" id="insertarImagen"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="clsSubCabecera">INGRESAR INFORMACION</td>
+      </tr>
+      <tr>
+        <td class="clsFilas">NOMBRES</td>
+        <td > <input type="text" id="id_txt_nombres"> </td>
+      </tr>
+      <tr>
+        <td class="clsFilas">APELLIDOS</td>
+        <td > <input type="text" id="id_txt_apellidos"></td>
+      </tr>
+
+      <tr>
+        <td class="clsFilas">SEXO</td>
+        <td ><select id="id_cmb_sexo" style="width: 68.5%">
+					<option value="1">FEMENINO</option>
+					<option value="2">MASCULINO</option>
+				</select></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">PESO (en libras)</td>
+        <td > <input type="number" id="id_nmb_peso"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">ESTATURA (en centimetros)</td>
+        <td><input type="number" id="id_nmb_estatura"></td>
+      </tr>
+	  <tr>
+	  <tr class="clsResultado">
+        <td><h1>IMC</h1></td>
+        <td id="id_td_IMC"></td>
+      </tr>
+        <td colspan="2"><button type="button" onclick="calculadoraIMC()"><img src="../imagenes/calculator.png" border="0">Calcular IMC</button></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

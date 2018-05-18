@@ -1,0 +1,56 @@
+body{
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+h1{
+  text-align: center;
+}
+
+form{
+  margin-bottom: 25px;
+
+}
+#id_td_IMC{
+	 font-weight: bold;
+  font-size: 20px;
+}
+table button{
+  margin-left: 40%;
+}
+
+.tblSalidaDatos{
+  margin: auto;
+  width: 40%;
+  height: auto;
+  border-collapse: collapse;
+}
+.tblSalidaDatos td{
+  border: 1px solid #000;
+}
+#insertarImagen{
+  width: 25%;
+}
+.clsResultado{
+  background-color: blue;
+  text-align: center;
+}
+
+.clsCabecera{
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.clsSubCabecera{
+  background-color: lightgrey;
+  font-weight: bold;
+  text-align: center;
+}
+
+.clsFilas{
+  font-weight: bold;
+  font-size: 12px;
+  width: 35%;
+}
+

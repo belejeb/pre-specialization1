@@ -1,0 +1,150 @@
+html 
+{
+  background-image: url(../imagenes/bg.gif);
+}
+
+audio
+{
+	-webkit-transition:all 5s linear;
+	-moz-transition:all 5s linear;
+	-o-transition:all 5s linear;
+	transition:all 5s linear;
+
+	-moz-box-shadow: 2px 5px 5px 2px #006773;
+	-webkit-box-shadow:  2px 5px 5px 2px #006773;
+	box-shadow: 2px 5px 5px 2px #006773;
+
+	-moz-border-radius:7px 7px 7px 7px ;
+	-webkit-border-radius:7px 7px 7px 7px ;
+	border-radius:7px 7px 7px 7px;
+}
+
+
+.caja_imagen
+{
+  border: 1px solid black;
+  position:fixed;
+  top:10%;
+  left:26%;
+  width:29%;
+  height: 40%;
+  border-radius:10px;
+}
+
+.caja_imagen img
+{
+	width: 100%;
+	height: 100%;
+	border-radius:10px;
+}
+
+.caja_reproductor
+{
+  border: 1px solid black;
+  position:fixed;
+  top:51%;
+  left:26%;
+  width:29%;
+  height: auto;
+  border-radius:10px;
+}
+
+.caja_reproductor audio
+{
+	width: 100%;
+}
+
+
+.caja_lista
+{
+  border:0px solid black;
+  position:fixed;
+  top:10%;
+  left:59.8%;
+  width:15%;
+  height: 47%;
+  border-radius:5px;  
+}
+
+.caja_lista select
+{
+  width:100%;
+  height: 100%;
+  border-radius:5px;  
+  overflow: scroll;
+}
+
+.caja_botones_avanzados
+{
+  border: 0px solid black;
+  position:fixed;
+  top:10%;
+  left:55.4%;
+  width:4%;
+  height: 47%;
+  border-radius:10px;
+}
+
+.caja_botones_avanzados button
+{
+    font-family: 'Calibri';
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border: none; 
+    border-radius: 5px;        
+    padding: 0.1em 0em;
+    display: inline-block;
+    color: #FFFFFF;
+    cursor: pointer;    
+    font-weight: bold;
+    width: 100%;
+    height: 12.5%;
+    margin: 5% 0px 5% 0px;
+}
+
+.botones_volumen
+{
+	background: #38610B;
+}
+
+.botones_volumen:hover
+{
+	background: rgba(98,125,77,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(98,125,77,1)), color-stop(100%, rgba(31,59,8,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=1 );
+
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;	
+}
+
+.botones_reproductor
+{
+	background: #FE2E2E;
+}
+
+
+.botones_reproductor:hover
+{
+	background: rgba(169,3,41,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;	
+}

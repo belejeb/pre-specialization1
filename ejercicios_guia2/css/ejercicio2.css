@@ -1,0 +1,96 @@
+body{
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-color:#6BCAE9;
+}
+h1{
+  text-align: center;
+}
+
+form{
+  margin-bottom: 25px;
+}
+
+table{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table td{
+  border: 1px solid black;
+}
+input[type=text] {
+	border-radius:5px;
+	font-size:14px;
+	text-transform: lowercase;
+}
+textarea{
+	border-radius:5px;
+	font-size:14px;
+	text-transform: lowercase;
+	box-shadow: 2px 2px 2px #404040;
+}
+button{
+	border-radius:3px;
+	border: 1.5px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow:2px 2px 2px #000000;
+}
+#id_txt_nit,#id_txt_dui,#id_txt_nup,#id_txt_isss{
+	background-color:#F5F5F5;
+	border:1px solid black;
+	
+}
+
+.clsCabecera{
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.clsfield{
+
+background: radial-gradient(ellipse at center,  #b3dced 7%,#29b8e5 49%,#bce0ee 84%); 
+
+
+
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+    border: 1.5px solid black;
+	 border-collapse: separate;
+  border-spacing: 0;
+   box-shadow: 10px 10px 5px #404040;
+   margin: auto;
+  width: 30%;
+  height: auto;
+	
+}
+
+.clsFilas{
+  font-weight: bold;
+  font-size: 14px;
+  width: 35%;
+   text-shadow: 1px 1px #404040;
+ 
+}
+
+.clsOutput{
+  text-align: center;
+}
+.fondoRojo{
+  background-color: red;
+  border: 1px solid black;
+}
+.fondoNaranja{
+  background-color: orange;
+}
+.fondoAmarillo{
+  background-color: yellow;
+}
+.fondoVerde{
+  background-color: green;
+}

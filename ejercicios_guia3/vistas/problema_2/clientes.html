@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/ejercicio2.css">
+    <script type="text/javascript" src="../../js/habilitarInputs.js"></script>
+    <script type="text/javascript" src="../../js/deshabilitarInputs.js"></script>
+    <script type="text/javascript" src="../../js/habilitarBotones.js"></script>
+    <title>REGISTRO CLIENTES</title>
+
+</head>
+
+<body onload="deshabilitar(); deshabilitarBotones()">
+
+    <div class="contenedor">
+        <header>
+            <h1>Registro de Clientes</h1>
+        </header>
+
+        <menu>
+
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="ventas.html">Ventas</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="reporteClientes.html">Reporte Clientes</a></li>
+                <li><a href="reporteElectrodomesticos.html">Reporte Electrodomesticos</a></li>
+				<li><a href="about.html">acerca de</a></li>
+            </ul>
+        </menu>
+
+        <div class="panel">
+            <form  name="informacion" id="informacion" method="post">
+                <fieldset>
+                    <legend>REGISTRO DE CLIENTES</legend>
+                    <table>
+                        <tr>
+                            <td><label for="input1"></label>CODIGO<span class="requerido">*</span></td>
+                            <td><input type="text" id="input1" class="input" name="input1" pattern="[0-9]{4}" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="input2"></label>NOMBRE<span class="requerido">*</span></td>
+                            <td><input type="text" id="input2" class="input" name="input2" pattern="[A-Za-z]{3,}" required></td>
+                        </tr>
+                        <tr>
+                            <td>APELLIDO<span class="requerido">*</span></td>
+                            <td><input type="text" id="input3" class="input" name="input3" pattern="[A-Za-z]{3,}" required></td>
+                        </tr>
+                        <tr>
+                            <td>DIRECCION</td>
+                            <td><textarea rows="4" cols="23" id="input4" class="input" name="input4"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>DUI<span class="requerido">*</span></td>
+                            <td><input type="file" accept="image/*" name="input5" class="input" id="input5"></td>
+                        </tr>
+                        <tr>
+                            <td>EMAIL</td>
+                            <td><input type="email" name="input6" id="input6" class="input" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"></td>
+                        </tr>
+                        <tr>
+                            <td>TELEFONO</td>
+                              <td><input type="tel" name="input7" id="input7" class="input" pattern="[2]{1}[0-9]{7}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CELULAR</td>
+                            <td><input type="text" name="input8" id="input8" class="input" pattern="[7]{1}[0-9]{7}"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+
+        <nav>
+            <ul>
+                <li><button name="nuevo" id="nuevo" form="informacion" onclick="habilitar(); nuevoOrModificar()"><img src="../../imagenes/new.png" alt="">NUEVO REGISTRO</button></li>
+                <li><button name="modificar" id="modificar" onclick="habilitar(); nuevoOrModificar()"><img src="../../imagenes/edit.png" alt="" >MODIFICAR</button></li>
+                <li><button name="eliminar" id="eliminar" form="informacion" onclick="eliminarRegistro()"><img src="../../imagenes/delete.png" alt="" >ELIMINAR</button></li>
+                <li><button name="guardar" id="guardar" form="informacion"><img src="../../imagenes/guardar.png" alt="">GUARDAR</button></li>
+                <li><button name="cancelar" id="cancelar" form="informacion" onclick="location.reload(true)"><img src="../../imagenes/cancel.png" alt="">CANCELAR</button></li>
+                <li><button name="cargar" id="cargar" form="informacion" onclick="cargarClientes()"><img src="../../imagenes/cargar.png" alt="">CARGAR</button></li>
+            </ul>
+        </nav>
+
+        <footer>
+            <p>Copyright (c) 2017 TODOS LOS DERECHOS RESERVADOS.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

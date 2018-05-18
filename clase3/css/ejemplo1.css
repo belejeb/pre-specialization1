@@ -1,0 +1,140 @@
+#id_div_formulario
+{
+  border: 0px solid black;
+  position:fixed;
+  top:5%;
+  left:23%;
+  width:50%;
+  height: auto;
+  padding: 5px;
+  border-radius: 15px
+}
+.css_fieldset {
+  border: 2px solid black;
+  border-radius: 10px;
+  width:96.7%;
+}
+.css_legend
+{
+   font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+   font-size:18px;
+   color: black;
+   text-align: center;
+   letter-spacing: 0.5px;
+   text-shadow: grey 1px;
+}
+body{
+background-color:#F1F7FC;
+}
+table
+{
+  font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+  font-size:14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+input[type=email]
+{
+  border: 1px solid black;
+  font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px
+}
+textarea{
+	border: 1px solid black;
+  font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px;
+	box-shadow: grey 1px 1px;
+}
+input[type=text]
+{
+  border: 1px solid black;
+  font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+input[type=search]
+{
+    border: 1px solid black;
+    font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px
+}
+input[type=url]
+{
+    border: 1px solid black;
+    font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px
+}
+input[type=tel]
+{
+    border: 1px solid black;
+    font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px
+}
+input[type=number]
+{
+    border: 1px solid black;
+    font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px;
+	}
+input[type=date]
+{
+    border: 1px solid black;
+    font-family: "Helvetica Ne    font-size:18px";
+    font-weight: bold;
+    border-radius: 5px;
+}
+input[type=submit]
+{
+    font-size:16px;
+    text-transform: uppercase;    
+	font-weight: bold;
+    border-radius: 5px;
+    text-shadow: grey 1px 1px;    
+	box-shadow: grey 1px 1p;
+	}
+input[type=button]
+{
+    font-size:16px;
+    text-transform: uppercase;    
+	font-weight: bold;
+    border-radius: 5px;
+    text-shadow: grey 1px 1px;    
+	box-shadow: grey 1px 1px;
+	}
+	input[type=reset]
+{
+    font-size:16px;
+    text-transform: uppercase;    
+	font-weight: bold;
+    border-radius: 5px;
+    text-shadow: grey 1px 1px;    
+	box-shadow: grey 1px 1px;
+	}
+input:required:invalid 
+{
+  border: 5px solid red;
+}
+ input:required:valid
+{
+  border: 5px solid green;
+} 
+textarea:required:invalid{
+	border: 5px solid red;
+}
+textarea:required:valid{
+	border: 5px solid red;
+}
+	

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset ="utf-8">
+<meta name ="description" content ="tercer ejercicio del desafio numero 1">
+<meta name="keywords" content ="HTML5, CSS3, JavaScript, UNIVO">
+<title>Tercer ejercicio desafio 1</title>
+<script src ="../js/ejercicio3.js"></script>
+<link rel="stylesheet" href ="../css/ejercicio3.css"></link>
+</head>
+<body>
+<form action="" method="" id="" name="" onsubmit="">
+    <table class="tblSalidaDatos">
+      <tr>
+        <td colspan="2" class="clsCabecera">CALCULADORA DE CUOTAS</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="clsSubCabecera">INGRESAR INFORMACION</td>
+      </tr>
+      <tr>
+        <td class="clsFilas">PRESTAMO ADQUIRIDO</td>
+        <td > $<input type="text" id="id_txt_prestamo"> </td>
+      </tr>
+      <tr>
+        <td class="clsFilas">TASA DE INTERES</td>
+        <td > <input type="text" id="id_txt_tasaInteres">%</td>
+      </tr>
+
+      <tr>
+        <td class="clsFilas">NUMERO DE MESES</td>
+        <td > <input type="text" id="id_txt_meses" required></td>
+      </tr>
+      
+	  <tr class="clsResultado">
+        <td>CUOTA MENSUAL</td>
+        <td id="id_td_cuota"></td>
+      </tr>
+        <td colspan="2"><button type="button" onclick="calcularCoutas()" style="center"><img src="../imagenes/calculator.png" border="0">Calcular Cuota</button></td>
+      </tr>
+    </table>
+  </form>
+  </body>
+  <html>

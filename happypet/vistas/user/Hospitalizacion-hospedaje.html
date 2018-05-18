@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <link rel="stylesheet" href="../../css/modal.css">
+  <script type="text/javascript" src="../../js/validacionHospitalizacion.js"></script>
+  <script type="text/javascript" src="../../js/modal.js"></script>
+  <title>Hospitalizacion-Hospedaje</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+      <ul>
+
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="#">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rhospital"  method="get">
+      <fieldset>
+                       <legend>REGISTRO DE HOSPITALIZACION-HOSPEDAJE</legend>
+                         <table>
+                             <tr>
+                               <link rel="stylesheet" href="../../css/modal.css">
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese codigo cliente" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>PACIENTE <span class="requerido">*</span></td>
+                               <td><input type="text" id="nombreMascota" pattern="[A-Za-z]{1,50}" placeholder="ingrese el nombre de mascota" maxlength="50" disabled required></td><td>  <a  id="modalMascota" onclick="mostrarMascota()" hidden="true">SELECCIONAR </a>
+
+                                 <!-- The Modal -->
+                                 <div id="myModalMascotas" class="modal">
+
+                                   <!-- Modal content -->
+                                   <div class="modal-content">
+                                     <span class="close"  onclick="cerrarMascota()">&times;</span>
+                                     <TABLE class="modaltable">
+                                     <TR>
+                                     <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                                     <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                                     <TH ROWSPAN=2 class="modalhead">CLIENTE </TH>
+                                     <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                                     <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+                                     <TH ROWSPAN=2 class="modalhead">RAZA</TH>
+                                     <TH ROWSPAN=2 class="modalhead">SEXO</TH>
+                                       <TH ROWSPAN=2 class="modalhead">FOTO</TH>
+                                     <TH ROWSPAN=2 class="modalhead">FECHA INGRESO</TH>
+                                      <TH ROWSPAN=2 class="modalhead">FECHA DECESO</TH>
+
+                                     </TR>
+                                     <TR></TR>
+                                     <TR>
+                                            <TD>00001</TD><TD onclick="seleccionarMascotatd1()">FLINSTONE</TD> <TD>IRVIN  </TD> <TD>6985-1568</TD> <TD>CANINO</TD> <TD>PASTOR ALEMAN</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-20</TD><TD>2018-04-20</TD>
+
+                                     </TR>
+                                     <TR>
+                                          <TD>00002</TD><TD onclick="seleccionarMascotatd2()">BUDDY </TD><TD>ALONSO </TD> <TD>7458-6255</TD> <TD>CANINO</TD> <TD>COMUN</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-29</TD><TD></TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00003</TD><TD onclick="seleccionarMascotatd3()">MISSY </TD> <TD>ISABEL</TD> <TD>7518-9532</TD> <TD>CANINO</TD> <TD>HUSKY</TD><TD>FEMENINO</TD><TD></TD><TD>2017-03-22</TD><TD></TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00004</TD><TD onclick="seleccionarMascotatd4();">FERN</TD> <TD>ANGELLY</TD> <TD>6985-1548 </TD> <TD>CANINO</TD> <TD>POODLE</TD><TD>FEMENINO</TD><TD></TD><TD>2017-02-20</TD><TD>2019-04-20</TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00005</TD><TD onclick="seleccionarMascotatd5()">FLASH </TD> <TD>DANILO </TD> <TD>712548429-5</TD> <TD>CANINO</TD> <TD>GREYHOUND</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-15</TD><TD></TD>
+                                     </TR>
+                                     <TR>
+                                          <TD>00006</TD><TD onclick="seleccionarMascotatd6()">AURA  </TD> <TD> JOSE  </TD> <TD>6495-3261</TD> <TD>FELINO</TD> <TD>RAGDOLL</TD><TD>MASCULINO</TD><TD></TD><TD>2017-04-10</TD><TD></TD>
+                                     </TR>
+
+                                     </TABLE>
+                                   </div>
+
+                                 </div>
+                               </td>
+                             <tr>
+                               <td>JAULA <span class="requerido">*</span></td>
+                               <td><select id="jaula" disabled required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+
+                          </select></td>
+
+                             </tr>
+                             <tr>
+                               <td>TAMAÑO<span class="requerido">*</span></td>
+                            <td><select id="tamaño" disabled required>
+                            <option>SELECCIONE UNA OPCION</option>
+                            <option>Grande</option>
+                            <option>Mediana</option>
+                            <option>Pequeña</option>
+                            </select></td>
+                             </tr>
+                             <tr>
+                             <td>FECHA DE ENTRADA<span class="requerido">*</span></td>
+                               <td><input type="date" id="fechaEntrada" disabled required></td>
+                             </tr>
+                             <tr>
+                             <td>FECHA DE SALIDA<span class="requerido">*</span></td>
+                               <td><input type="date" id="fechaSalida" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>DISPONIBILIDAD<span class="requerido">*</span></td>
+                            <td><select id="disponibilidad" disabled>
+                            <option>SELECCIONE UNA OPCION</option>
+                            <option>SI</option>
+                            <option>NO</option>
+                            </select></td>
+                             </tr>
+                             <tr>
+                               <td>TIPO DE INGRESO<span class="requerido">*</span></td>
+                            <td><select id="tipoIngreso" disabled>
+                            <option>SELECCIONE UNA OPCION</option>
+                            <option>HOSPITALIZACION</option>
+                            <option>HOSPEDAJE</option>
+                            </select></td>
+                             </tr>
+                         </table>
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                        <TH ROWSPAN=2 class="modalhead">PACIENTE</TH>
+                        <TH ROWSPAN=2 class="modalhead">JAULA</TH>
+                        <TH ROWSPAN=2 class="modalhead">TAMAÑO</TH>
+                        <TH ROWSPAN=2 class="modalhead">FECHA DE ENTRADA</TH>
+                        <TH ROWSPAN=2 class="modalhead">FECHA DE SALIDA</TH>
+                        <TH ROWSPAN=2 class="modalhead">DISPONIBILIDAD</TH>
+                        <TH ROWSPAN=2 class="modalhead">TIPO DE INGRESO</TH>
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD><TD>RANGER</TD> <TD>CANINO</TD> <TD>GRANDE</TD> <TD>11/01/2016</TD> <TD>18/01/2016</TD><TD>NO</TD><TD>HOSPEDAJE</TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002</TD><TD>CANELO</TD><TD>CANINO</TD> <TD>GRANDE</TD> <TD>18/02/2016</TD> <TD>22/02/16</TD><TD>NO</TD><TD>HOSPITALIZACION</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003</TD><TD>FOFY</TD> <TD>FELINO</TD> <TD>PEQUEÑA</TD> <TD>01/03/2016</TD> <TD>05/03/2016</TD><TD>NO</TD><TD>HOSPEDAJE</TD>
+                      </TR>
+                      <TR>
+                              <TD>00004</TD><TD>DUQUESA</TD> <TD>FELINO</TD> <TD>PEQUEÑA </TD> <TD>02/03/2016</TD> <TD>10/03/2016</TD><TD>NO</TD><TD>HOSPITALIZACION</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005</TD><TD>FIFI</TD> <TD>FELINO</TD> <TD>MEDIANA</TD> <TD>09/03/2016</TD> <TD>12/03/2016</TD><TD>NO</TD><TD>HOSPEDAJE</TD>
+                      </TR>
+                     </TABLE>
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body{
+background-color : #0081cf;
+color:#FFFFFF;
+}
+div{
+	 margin: auto;
+  width: 40%;
+  height: auto;
+  border-collapse: collapse;
+}
+table{
+	 border: 1px solid black;
+	position: relative;
+	top:80%;
+	left:5%;
+	width:30%;
+	height:7%;
+}

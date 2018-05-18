@@ -1,0 +1,68 @@
+<html lang "es">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Tercer Ejemplo de modulo 2 de pre especializacion">
+<meta name="keywords" content="HTML5, CSS3, Javascript, UNIVO">
+<title>Tercer Ejemplo</title>  
+<script src="../js/tercero.js"></script> 
+<link rel="stylesheet" href="../css/ejemplo3.css" >
+</head>
+<body>
+<center>
+<table style="border:1px solid black; width:40%; border-spacing: 0px;" >
+<tr>
+	<td colspan="2" style="font-weight:bold; background-color:#01A9DB; font-size: 20px; text-align: center;" >CALCULADORA LABORAL</td>
+</tr>
+<tr>
+	<td colspan="2" class ="sub_titulo">informaci&oacute;n personal</td>
+</tr>
+<tr>
+	<td style="width :35%">Nombre</td>
+	<td style="width :65%"><input type="text" id="id_txt_nombres" style="width 95%"></td>
+</tr>
+<tr>
+	<td style="width :35%">Apellidos</td>
+	<td style="width :65%"><input type="text" id="id_txt_apellidos" style="width 95%"></td>
+</tr>
+<tr>
+	<td style="width :35%">Edad</td>
+	<td style="width :65%"><input type="number" id="id_nmb_edad" style="width 95%"></td>
+</tr>
+<tr>
+	<td style="width :35%">Sexo</td>
+	<td style="width :65%">
+	<input type="radio" name="rdo_sexo" id="id_rdo_sexo_masculino" value="1"> Masculino
+	<input type="radio" name="rdo_sexo" id="id_rdo_sexo_femenino" value="2"> Femenino
+	</td>
+	</tr>
+<tr>
+	<td style="width :35%">Salario bruto</td>
+	<td style="width :65%"><input type="number" id="id_nmb_salario" style="width 95%"></td>
+</tr>
+<tr>
+	<td colspan="2" class ="sub_titulo">descuentos de salario</td>
+</tr>
+<tr>
+	<td style ="width:35%; font-weight: bold">Descuento de ISSS (-)</td>
+	<td style="width:65%;" id="id_td_descuento_isss"></td>
+</tr>
+<tr>
+	<td style ="width:35%; font-weight: bold">Descuento de Renta (-)</td>
+	<td style="width:65%;" id="id_td_descuento_renta"></td>
+</tr>
+<tr>
+	<td style ="width:35%; font-weight: bold">Descuento de AFP (-)</td>
+	<td style="width:65%;" id="id_td_descuento_afp"></td>
+</tr>
+<tr>
+	<td style ="width:35%; font-weight: bold; background-color:#0000ff; font-size: 20px text-align: center; color:white">salario liquido</td>
+	
+	<td style="width:65%; font-weight: bold; background-color:#0000ff; font-size: 20px text-align: center; color:white" id="id_td_salario_liquido"></td>
+</tr>
+<tr>
+	<td colspan="2" style="text-align:center"><button onclick="tercero()"><img src="../images/calculator.png" border="0">&nbsp;<b>Calcular salario</b></button></td>
+</tr>
+</table>
+</center>
+</body>
+</html>

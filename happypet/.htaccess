@@ -1,0 +1,13 @@
+Options -Indexes
+#Options All -Indexes
+ErrorDocument 403 /happypet/vistas/403.html
+ErrorDocument 404 /happypet/vistas/404.html
+ErrorDocument 500 /happypet/vistas/500.html
+# no nasty crackers in here!
+#order deny,allow
+#deny from all
+#allow from 192.168.1.1/24
+#SetEnv SITE_WEBMASTER "Alumnos UNIVO"
+#SetEnv SITE_WEBMASTER_URI mailto:leonardo.univo@gmail.com
+
+UnSetEnv REMOTE_ADDR

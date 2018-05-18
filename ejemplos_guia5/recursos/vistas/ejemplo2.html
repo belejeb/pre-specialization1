@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo avanzado de audio</title>
+<meta charset= "utf-8">
+<link rel="stylesheet" type="text/css" href="../css/audio_avanzado.css">
+<script type="text/javascript" src="../js/audio_avanzado.js"></script>
+</head>
+<body>
+
+<div class= "caja_imagen"><img src="../imagenes/imagen1.gif" id= "img_audio"> </div>
+<div class= "caja_reproductor"> 
+  <audio id="audio_track" controls preload="auto">
+   <source id="source_mp3" src="../audio/audio1.mp3" type="audio/mpeg"/>
+   Tu Navegador no soporta con las nuevas caracteristicas de HTML5
+</audio>
+</div>
+<div class="caja_botones_avanzados">
+    <button class="botones_reproductor" id= "btn_previo"><img src="../imagenes/previo.png" border"0"> </button><br>
+    <button class="botones_reproductor" id= "btn_play_pause"><img src="../imagenes/play.png" border"0"> </button><br>
+	<button class="botones_reproductor" id= "btn_stop"><img src="../imagenes/stop.png" border"0"> </button><br>
+	<button class="botones_reproductor" id= "btn_next"><img src="../imagenes/next.png" border"0"> </button><br>
+    <button class="botones_volumen" id= "btn_volumen_muted"><img src="../imagenes/muted.png" border"0"> </button><br>
+	<button class="botones_volumen" id= "btn_volumen_up"><img src="../imagenes/volumen_up.png" border"0"> </button><br>
+	<button class="botones_volumen" id= "btn_volumen_down"><img src="../imagenes/volumen_down.png" border"0"> </button><br>
+</div>
+<div class="caja_lista">
+<select id="list_musicas" multiple>
+<option value=0>1- Te lo pido por favor</option>
+<option value=2>2- Dangerous</option>
+<option value=3>3- Demons</option>
+</select>
+</div>
+</body>
+</html>

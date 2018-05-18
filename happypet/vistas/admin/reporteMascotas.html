@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+  <script type="text/javascript" src="../../js/modal.js"></script>
+  <script type="text/javascript" src="../../js/validacionMascotas.js"></script>
+  <title>Report Pacientes</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rmascotas"  method="get">
+      <fieldset>
+                       <legend>REPORTE DE PACIENTES</legend>
+<table>
+  <tr>
+  <td>POR NOMBRE MASCOTA<span class="requerido">*</span></td>
+  <td><input type="button" value="GENERAR"></td>
+</tr>
+<tr>
+<td>POR CLIENTE<span class="requerido">*</span></td>
+<td><input type="button" value="GENERAR"></td>
+</tr>
+</table>
+                         <TABLE class="modaltableinner">
+                         <TR>
+                         <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                         <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                         <TH ROWSPAN=2 class="modalhead">CLIENTE </TH>
+                         <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                         <TH ROWSPAN=2 class="modalhead">ESPECIE</TH>
+                         <TH ROWSPAN=2 class="modalhead">RAZA</TH>
+                         <TH ROWSPAN=2 class="modalhead">SEXO</TH>
+                           <TH ROWSPAN=2 class="modalhead">FOTO</TH>
+                         <TH ROWSPAN=2 class="modalhead">FECHA INGRESO</TH>
+                          <TH ROWSPAN=2 class="modalhead">FECHA DECESO</TH>
+
+                         </TR>
+                         <TR></TR>
+                         <TR>
+                                <TD>00001</TD><TD >FLINSTONE</TD> <TD>IRVIN  </TD> <TD>6985-1568</TD> <TD>CANINO</TD> <TD>PASTOR ALEMAN</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-04-20</TD><TD>2018-04-20</TD>
+
+                         </TR>
+                         <TR>
+                              <TD>00002</TD><TD >BUDDY </TD><TD>ALONSO </TD> <TD>7458-6255</TD> <TD>CANINO</TD> <TD>COMUN</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-04-29</TD><TD></TD>
+                         </TR>
+                         <TR>
+                              <TD>00003</TD><TD >MISSY </TD> <TD>ISABEL</TD> <TD>7518-9532</TD> <TD>CANINO</TD> <TD>HUSKY</TD><TD>FEMENINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-03-22</TD><TD></TD>
+                         </TR>
+                         <TR>
+                              <TD>00004</TD><TD >FERN</TD> <TD>ANGELLY</TD> <TD>6985-1548 </TD> <TD>CANINO</TD> <TD>POODLE</TD><TD>FEMENINO</TD><TD><img src="../../imagenes/dog.png"></TD><TD>2017-02-20</TD><TD>2019-04-20</TD>
+                         </TR>
+                         <TR>
+                              <TD>00005</TD><TD >FLASH </TD> <TD>DANILO </TD> <TD>712548429-5</TD> <TD>CANINO</TD> <TD>GREYHOUND</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/dog.png"></TD> <TD>2017-04-15</TD><TD></TD>
+                         </TR>
+                         <TR>
+                              <TD>00006</TD><TD >AURA  </TD> <TD> JOSE  </TD> <TD>6495-3261</TD> <TD>FELINO</TD> <TD>RAGDOLL</TD><TD>MASCULINO</TD><TD><img src="../../imagenes/cat.png"></TD><TD>2017-04-10</TD><TD></TD>
+                         </TR>
+
+                         </TABLE>
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

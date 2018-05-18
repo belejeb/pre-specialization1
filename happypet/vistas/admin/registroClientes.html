@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script type="text/javascript" src="../../js/validacionClientes.js"></script>
+  <title>Reg Clientes</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rclientes"  method="get">
+      <fieldset>
+                       <legend>REGISTRO DE CLIENTES</legend>
+                         <table>
+                             <tr>
+                               <link rel="stylesheet" href="../../css/modal.css">
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese codigo cliente" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>NOMBRE <span class="requerido">*</span></td>
+                               <td><input type="text" id="nombre" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese nombre cliente" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>APELLIDO<span class="requerido">*</span></td>
+                               <td><input type="text" id="apellido" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese apellido cliente" disabled required></td>
+                             </tr>
+     						 <tr>
+                   <td>DUI<span class="requerido">*</span></td>
+                   <td><input type="text" id="dui" pattern= "^\d{8}-\d{1}$" maxlength="10" placeholder="ingrese dui cliente"disabled required></td>
+     								</tr>
+
+     						 <tr>
+                   <td>TELEFONO<span class="requerido">*</span></td>
+                   <td><input type="text" id="telefono" pattern= "^[6-7|2]{1}[0-9]{3}-[0-9]{4}$" maxlength="9" placeholder="ingrese telefono cliente"disabled required></td>
+                                 </tr>
+                                 <tr>
+                                 <td>DIRECCION</td>
+                                 <td><textarea id="id_txt_direccion" rows="4" cols="" placeholder="ingrese direccion de cliente"pattern="[A-Za-z\s]{1,150}" maxlength="150" disabled></textarea></td>
+                             </tr>
+                             <tr>
+                               <td>CORREO ELECTRONICO</td>
+                               <td><input type="email" id="correo"  maxlength="60" placeholder="ingrese correo"disabled></td>
+                           </tr>
+                             </tr>
+     						<tr>
+                  <td>FECHA DE REGISTRO<span class="requerido">*</span></td>
+                  <td><input type="date" id="fechaRegistro" disabled required></td>
+
+                             </tr>
+
+                         </table>
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                        <TH ROWSPAN=2 class="modalhead">NOMBRE </TH>
+                        <TH ROWSPAN=2 class="modalhead">APELLIDO </TH>
+                        <TH ROWSPAN=2 class="modalhead">DUI</TH>
+                        <TH ROWSPAN=2 class="modalhead">DIRECCION</TH>
+                        <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                        <TH ROWSPAN=2 class="modalhead">CORREO</TH>
+                        <TH ROWSPAN=2 class="modalhead">FECHA REGISTRO</TH>
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD><TD>IRVIN</TD> <TD>ALVAREZ  </TD> <TD>56987412-0</TD> <TD>SAN MIGUEL 2 AVE SUR #606 BARRIO EL CALVARIO</TD> <TD>6985-1568</TD><TD>TEST@TEST.COM</TD><TD>2017-04-20</TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002</TD><TD>ALONSO </TD><TD>RIVAS</TD> <TD>18462159-6</TD> <TD>MONCAGUA 2 AVE NORTE #95 BARRIO CONCEPCION</TD> <TD>7458-6255</TD><TD>TEST@TEST.COM</TD><TD>2017-04-29</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003</TD><TD>ISABEL </TD> <TD>SANCHEZ</TD> <TD>78936561-4</TD> <TD>SAN MIGUEL 3 CALLE PONIENTE #98 </TD> <TD>7518-9532</TD><TD>TEST@TEST.COM</TD><TD>2017-03-22</TD>
+                      </TR>
+                      <TR>
+                              <TD>00004</TD><TD>ANGELLY</TD> <TD>HERNADEZ</TD> <TD>84562848-4 </TD> <TD>BERLIN 1 AVE NORTE #95 BARRIO EL CENTRO</TD> <TD>6985-1548</TD><TD>TEST@TEST.COM</TD><TD>2017-02-20</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005</TD><TD>DANILO  </TD> <TD>JOYA</TD> <TD>12548429-5</TD> <TD>SAN SALVADOR 25 AVE NORTE #651 </TD> <TD>7120-9415</TD><TD>TEST@TEST.COM</TD><TD>2017-04-15</TD>
+                      </TR>
+                      <TR>
+                              <TD>00006</TD><TD>JOSE  </TD> <TD> GARCIA </TD> <TD>16589545-7</TD> <TD>NUEVA GUADALUPE 3 CALLE ORIENTE #654 </TD> <TD>6495-3261</TD><TD>TEST@TEST.COM</TD><TD>2017-04-10</TD>
+                      </TR>
+
+                     </TABLE>
+
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

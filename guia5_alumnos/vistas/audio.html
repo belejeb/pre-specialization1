@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<title>Ejemplo basico de audio</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/audio.css">
+		<script type="text/javascript" src="../js/audio.js"></script>
+	</head>
+
+	<body>
+		<div class="caja_imagen"><img src="../imagenes/imagen1.gif" id="img_audio"></div>
+		<div class="caja_reproductor">
+			<audio id="audio_track" controls preload="auto">
+				<source src="../audio/audio1.mp3" type="audio/mpeg" />
+				<source src="../audio/audio1.ogg" type="audio/ogg" />
+				<source src="../audio/audio1.wav" type="audio/wav" />
+				Tu navegador no soporta con alas nuevas caracteristicas de HTML5
+			</audio>
+		</div>
+		<div class="caja_botones">
+			<button class="botones_volumen" id="btn_volumen_up"><img src="../imagenes/volumen_up.png" border="0"></button><br>
+			<button class="botones_volumen" id="btn_volumen_down"><img src="../imagenes/volumen_down.png" border="0"></button><br>
+			<button class="botones_reproductor" id="btn_play"><img src="../imagenes/play.png" border="0"></button><br>
+			<button class="botones_reproductor" id="btn_pause"><img src="../imagenes/pause.png" border="0"></button><br>
+			<button class="botones_reproductor" id="btn_stop"><img src="../imagenes/stop.png" border="0"></button><br>
+		</div>
+	</body>
+</html>

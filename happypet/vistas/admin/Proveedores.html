@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script type="text/javascript" src="../../js/validacionProveedores.js"></script>
+  <title>Proveedores</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </menu>
+
+    <section id="section">
+<form Id="Rproveedores"  method="get">
+      <fieldset>
+                       <legend>REGISTRO DE PROVEEDORES</legend>
+                         <table>
+                             <tr>
+                               <link rel="stylesheet" href="../../css/modal.css">
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese codigo cliente" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>PROVEEDOR <span class="requerido">*</span></td>
+                               <td><input type="text" id="proveedor" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese nombre del proveedor" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>CONTACTO <span class="requerido">*</span></td>
+                               <td><input type="text" id="contacto" pattern="[A-Za-z\s]{1,50}" maxlength="50" placeholder="ingrese nombre del contacto" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>MARCA<span class="requerido">*</span></td>
+                               <td><input type="text" id="marca" pattern="[A-Za-z\s]{1,50}" maxlength="50" placeholder="ingrese marca del provedor" disabled required></td>
+                             </tr>
+                             <tr>
+                               <td>DESCRIPCION<span class="requerido">*</span></td>
+                               <td><input type="text" id="descripcion" pattern="[A-Za-z\s]{1,50}" maxlength="250" placeholder="ingrese marca del provedor" disabled required></td>
+                             </tr>
+     						 <tr>
+                               <td>PRODUCTO<span class="requerido">*</span></td>
+                               <td><input type="text" id="producto" pattern="[A-Za-z\s]{1,50}" maxlength="250" placeholder="ingrese marca del provedor" disabled required></td>
+                             </tr>
+     						 <tr>
+                   			<td>TELEFONO<span class="requerido">*</span></td>
+                   				<td><input type="text" id="telefono" pattern= "^[6-7|2]{1}[0-9]{3}-[0-9]{4}$" maxlength="9" placeholder="ingrese telefono cliente"disabled required></td>
+                             </tr>
+                                 <tr>
+                                 <td>DIRECCION</td>
+                                 <td><textarea id="id_txt_direccion" rows="4" cols="" placeholder="ingrese direccion de cliente"pattern="[A-Za-z\s]{1,150}" maxlength="150" disabled></textarea></td>
+                             </tr>
+                             <tr>
+                               <td>CORREO ELECTRONICO</td>
+                               <td><input type="email" id="correo"  maxlength="60" placeholder="ingrese correo"disabled></td>
+                           </tr>
+
+                         </table>
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                        <TH ROWSPAN=2 class="modalhead">PROVEEDOR</TH>
+                        <TH ROWSPAN=2 class="modalhead">CONTACTO</TH>
+                        <TH ROWSPAN=2 class="modalhead">MARCA</TH>
+                        <TH ROWSPAN=2 class="modalhead">DESCRIPCION</TH>
+                        <TH ROWSPAN=2 class="modalhead">PRODUCTO</TH>
+                        <TH ROWSPAN=2 class="modalhead">TELEFONO</TH>
+                        <TH ROWSPAN=2 class="modalhead">DIRECCION</TH>
+                        <TH ROWSPAN=2 class="modalhead">CORREO</TH>
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD><TD>Propecsa</TD> <TD>Cecilia Granados</TD> <TD>propecsa</TD> <TD>vacuna para la rabia</TD><TD>Novibac</TD><TD>2224-4367</TD><TD>Col Flor Blanca Cl El Progreso y 51 Av Sur No 2649 San Salvador, El Salvador</TD><TD>TEST@TEST.COM</TD>
+                      </TR>
+                      <TR>
+                              <TD>00002</TD><TD>Gamma Lab</TD> <TD>Julio Chavez</TD> <TD>Gamma</TD> <TD>vacuna contra garrapatas</TD><TD>Gavac</TD><TD>2121-4300</TD><TD>Blvd Vijosa Edif 36 Zona Industrial Merliot San Salvador, El Salvador</TD><TD>TEST@TEST.COM</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003</TD><TD>LHISA</TD> <TD>Juan Campos</TD> <TD>Vetriderm</TD> <TD>Jabon de Baño</TD><TD>Novibac</TD><TD>2241-8100</TD><TD>Carretera al Puerto de La Libertad Km 20, Zaragoza, El Salvador, C.A.Zaragoza, El Salvador</TD><TD>TEST@TEST.COM</TD>
+                      </TR>
+                      <TR>
+                             <TD>00004</TD><TD>policlinicaveterinaria</TD> <TD>Jose Cedillo</TD> <TD>Pet</TD> <TD>Shampoo para perros</TD><TD>Novibac</TD><TD>2298-0324</TD><TD>Col Avila 63 Av Sur y Pje Sta Mónica No 17, Atrás de Torre Scoti San Salvador, El Salvador</TD><TD>TEST@TEST.COM</TD>
+                      </TR>
+                      <TR>
+                              <TD>00005</TD><TD>Bayer</TD> <TD>Javier Sanchez</TD> <TD>Asuntol</TD> <TD>Jabon de baño para perros</TD><TD>Asuntol</TD><TD>2267-9000</TD><TD>Col Escalón Cl El Mirador Complejo World Trade Center Trr I Nvl 5 Ent 87 y 89 Av San Salvador, El Salvador</TD><TD>TEST@TEST.COM</TD>
+                      </TR>
+                     </TABLE>
+
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

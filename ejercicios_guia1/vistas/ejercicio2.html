@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset ="utf-8">
+<meta name ="description" content ="segundo ejercicio del desafio numero 1">
+<meta name="keywords" content ="HTML5, CSS3, JavaScript, UNIVO">
+  <link rel="stylesheet" href="../css/ejercicio2.css">
+  <script src="../js/ejercicio2.js"></script>
+  <title>segundo ejercicio del desafio numero 1</title>
+</head>
+<body>
+
+  <h1>CALCULADORA LABORAL</h1>
+
+  <form action="#">
+    <table>
+      <tr>
+        <td colspan="2" class="clsCabecera">CALCULADORA LABORAL</td>
+        <td rowspan="13" id="insertarImagen"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="clsSubCabecera">INFORMACION PERSONAL</td>
+      </tr>
+      <tr>
+        <td class="clsFilas">NOMBRES</td>
+        <td><input type="text" id="id_txt_nombres"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">APELLIDOS</td>
+        <td><input type="text" id="id_txt_apellidos"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">EDAD</td>
+        <td><input type="number" id="id_nmb_edad"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">SEXO</td>
+        <td>
+          <input type="radio" value="2" id="id_rdo_sexo_masculino" name="sexo" checked="checked">Masculino
+          <input type="radio" value="1" id="id_rdo_sexo_femenino" name="sexo">Femenino
+        </td>
+      </tr>
+      <tr>
+        <td class="clsFilas">SALARIO BRUTO</td>
+        <td><input type="number" id="id_nmb_salario"></td>
+      </tr>
+       <tr>
+        <td colspan="2"><button type="button" onclick="calcularSalario()">Calcular Salario</button></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="clsSubCabecera">DESCUENTO DEL SALARIO</td>
+      </tr>
+      <tr>
+        <td class="clsFilas">DESCUENTO ISSS(-)</td>
+        <td id="id_td_descuento_isss" class="clsOutput"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">DESCUENTO RENTA(-)</td>
+        <td id="id_td_descuento_renta" class="clsOutput"></td>
+      </tr>
+      <tr>
+        <td class="clsFilas">DESCUENTO AFP(-)</td>
+        <td id="id_td_descuento_afp" class="clsOutput"></td>
+      </tr>
+      <tr class="clsResultado">
+        <td>SALARIO LIQUIDO</td>
+        <td id="id_td_salario_liquido"></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

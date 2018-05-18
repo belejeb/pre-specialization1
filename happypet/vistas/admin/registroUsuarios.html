@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <script type="text/javascript" src="../../js/validacionUser.js"></script>
+  <script type="text/javascript" src="../../js/modal.js"></script>
+  <title>Reg Usuarios</title>
+</head>
+
+<body>
+
+  <div id="contenedorPrincipal">
+
+    <div id="cabecera">
+      <h1>HAPPY PET</h1>
+    </div>
+    <menu id="menu">
+
+      <ul>
+        <li><a href="registroUsuarios.html">Usuarios</a></li>
+        <li><a href="registroEmpleados.html">Empleados</a></li>
+        <li><a href="registroClientes.html">Clientes</a></li>
+        <li><a href="registroPacientes.html">Mascotas</a></li>
+        <li><a href="Facturacion.html">Facturacion</a></li>
+        <li><a href="fichaMedica.html">Ficha Médica</a></li>
+        <li><a href="hospitalizacion-hospedaje.html">Hospitalización</a></li>
+        <li><a href="inventario.html">Inventario</a></li>
+        <li><a href="#">Reportes</a>
+          <ul  class="mostrar">
+            <li><a href="reporteMascotas.html">Mascotas</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Hospedajes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </menu>
+
+    <section id="section">
+<form Id="Ruser"  method="get">
+      <fieldset>
+                       <legend>REGISTRO DE USUARIOS</legend>
+                         <table>
+                             <tr>
+                               <link rel="stylesheet" href="../../css/modal.css">
+                                 <td>CODIGO<span class="requerido">*</span></td>
+                                 <td><input type="text" id="codigo" pattern= "^[0-9]{5}" maxlength="5" placeholder="ingrese codigo usuario" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>USUARIO <span class="requerido">*</span></td>
+                               <td><input type="text" id="user" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese nombre usuario" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>CONTRASEÑA <span class="requerido">*</span></td>
+                               <td><input type="password" id="pass" pattern="[A-Za-z]{1,50}" maxlength="50" placeholder="ingrese nombre usuario" disabled required></td>
+
+                             </tr>
+                             <tr>
+                               <td>TIPO<span class="requerido">*</span></td>
+                               <td><input type="text" id="tipoUser" pattern="[A-Za-z]{1,50}" maxlength="50" disabled placeholder="ingrese el tipo de usuario"required></td><td>  <a id="modalUser" onclick="mostrarUser()" hidden="true">SELECCIONAR </a>
+
+                                  <!-- The Modal -->
+                                  <div id="myModalUser" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                      <span class="close"  onclick="cerrarUser()">&times;</span>
+                                      <TABLE class="modaltable">
+                                   <TR>
+                                     <TH ROWSPAN=2 class="modalhead">CODIGO </TH>
+                                     <TH ROWSPAN=2 class="modalhead">TIPO</TH>
+
+                                   </TR>
+                                   <TR></TR>
+                                   <TR>
+                                             <TD>00001</TD> <TD onclick="seleccionarUsertd1()">ADMIN</TD>
+
+                                   </TR>
+                                   <TR>
+                                           <TD>00002 </TD><TD onclick="seleccionarUsertd2()">VETERINARIO</TD>
+                                         </TR>
+                                   <TR>
+                                           <TD>00003 </TD> <TD onclick="seleccionarUsertd3()">USUARIO</TD>
+                                   </TR>
+
+                                  </TABLE>
+                                    </div>
+
+                                  </div>
+                                </td>
+
+
+                         </table>
+                         <TABLE class="modaltableinner">
+                      <TR>
+                        <TH ROWSPAN=2 class="modalhead">CODIGO</TH>
+                        <TH ROWSPAN=2 class="modalhead">USUARIO</TH>
+                        <TH ROWSPAN=2 class="modalhead">TIPO</TH>
+                        <TH ROWSPAN=2 class="modalhead">CLAVE</TH>
+
+
+                      </TR>
+                      <TR></TR>
+                      <TR>
+                                <TD>00001</TD><TD>ADMIN</TD> <TD>ADMIN  </TD><TD>CLAVE</TD>
+
+                      </TR>
+                      <TR>
+                              <TD>00002</TD><TD>VET </TD><TD>VETERINARIO</TD><TD>CLAVE</TD>
+                      </TR>
+                      <TR>
+                              <TD>00003</TD><TD>USER </TD> <TD>USER</TD><TD>CLAVE</TD>
+
+                     </TABLE>
+
+                     </fieldset>
+                   </form>
+      <!-- Trigger/Open The Modal -->
+
+
+    </section>
+
+    <div id="botones">
+      <button name="button" id="nuevo"><img src="../../imagenes/nuevo.png"> Nuevo</button>
+      <button name="button" id="modificar" disabled><img src="../../imagenes/modificar.png"></img> Modificar</button>
+      <button name="button" id="eliminar"disabled><img src="../../imagenes/eliminar.png"> Eliminar</button>
+      <button name="button" id="guardar" disabled><img src="../../imagenes/guardar.png"> Guardar</button>
+      <button name="button" id="cancelar" disabled><img src="../../imagenes/cancelar.png">Cancelar</button>
+      <button name="button" id="cargar"><img src="../../imagenes/cargar.png">Cargar</button>
+    </div>
+
+    <footer>COPYRIGHTS (©) 2017</footer>
+  </div>
+
+</body>
+
+</html>

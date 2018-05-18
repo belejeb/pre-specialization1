@@ -1,0 +1,48 @@
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Validacion de Formularios: Numeros de carnet</title>
+<link rel="stylesheet" href="../recursos/css/estilo.css">
+<script>
+function iniciar()
+{
+	document.getElementById("informacion").addEventListener("invalid", validacion, true);
+	document.getElementById("informacion").addEventListener("input", controlar, false);
+}
+
+function controlar(e)
+{
+	var elemento=e.target;
+	if (elemento.validity.valid) 
+		{
+		
+			elemento.classList.remove('css_error_input');
+			elemento.classList.add('css_ok_input');
+		}
+
+	else
+		{
+			elemento.classList.add('css_error_input')
+		}
+}
+
+function validacion(e)
+{
+	var elemento=e.target;
+	elemento.classList.add('css_error_input')
+}
+
+window.addEventListener("load", iniciar, false);
+</script>
+</head>
+<body>
+	<section>
+		<form id="informacion" name="informacion" method="get">
+			<label for="input1">Carnet UNIVO (Formato U########):</label> <input type="text" name="input1" id="input1" pattern= "^[U](19│20)[0-9]{6}*$" required><br>
+        	<label for="input2">Carnet UDB (Formato AA######):</label> <input type="text"name="input2" id="input2" pattern= "^[A-Z]{2}\d{6}$" required><br>
+       		<label for="input3">Carnet EMPLEADO CSJ (Formato: AA###)</label> <input type="text"name="input3" id="input3" pattern= "^[A-Z]{2}\d{3}$" required><br>
+	    	<input type="submit" id ="enviar" value= "REGISTRAR">
+		</form>
+	</section>
+</body>
+</html>

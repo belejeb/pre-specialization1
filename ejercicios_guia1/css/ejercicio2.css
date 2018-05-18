@@ -1,0 +1,66 @@
+body{
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+h1{
+  text-align: center;
+}
+
+form{
+  margin-bottom: 25px;
+}
+
+table{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table td{
+  border: 1px solid black;
+}
+
+table button{
+  margin-left: 40%;
+}
+#insertarImagen{
+  width: 25%;
+}
+.clsResultado{
+  background-color: blue;
+  text-align: center;
+}
+
+.clsCabecera{
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.clsSubCabecera{
+  background-color: lightgrey;
+  font-weight: bold;
+  text-align: center;
+}
+
+.clsFilas{
+  font-weight: bold;
+  font-size: 12px;
+  width: 35%;
+}
+.clsOutput{
+  text-align: center;
+}
+.fondoRojo{
+  background-color: red;
+  border: 1px solid black;
+}
+.fondoNaranja{
+  background-color: orange;
+}
+.fondoAmarillo{
+  background-color: yellow;
+}
+.fondoVerde{
+  background-color: green;
+}

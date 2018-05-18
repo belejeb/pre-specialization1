@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Ejemplo basico de video</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/video.css">
+	<script type="text/javascript" src="../js/video.js"></script>
+</head>
+<body>
+	<div class="caja_reproductor">
+			<video id="id_video" width="640" height="360" preload controls poster="../imagenes/pollitos.jpg">
+				<source src="../video/video1.mp4" type='video/mp4' />
+				Tu navegador no soporta las nuevas caracteristicas de HTML5
+
+			</video>
+	</div>
+	<div class="caja_botones">
+		<button class="botones_reproductor" id="btn_play" title="Play"> <img src="../imagenes/play.png" border="0"></button>
+		<button class="botones_reproductor" id="btn_pause" title="Pause"> <img src="../imagenes/pause.png" border="0"></button>
+		<button class="botones_reproductor" id="btn_stop" title="Stop"> <img src="../imagenes/stop.png" border="0"></button>
+		<button class="botones_reproductor" id="btn_bucle" title="Bucle"> <img src="../imagenes/bucle.png" id="img_btn_loop" border="0"></button>
+		<button class="botones_reproductor" id="btn_ampliar_reduce" title="Ampliar /Reducir"> <img src="../imagenes/ampliar.png" id="img_btn_amp_red" border="0"></button>
+		<button class="botones_reproductor" id="btn_fullscreen" title="Toda la pantalla"> <img src="../imagenes/fullscreen.png" id="img_btn_fullscreen" border="0"></button>
+
+		<button class="botones_volumen" id="btn_volumen_up"> <img src="../imagenes/volumen_up.png" border="0"></button>
+		<button class="botones_volumen" id="btn_volumen_down"> <img src="../imagenes/volumen_down.png" border="0"></button>
+		<button class="botones_volumen" id="btn_volumen_muted"> <img src="../imagenes/muted.png" border="0" id="img_btn_muted">	</button>
+		</div>
+	</body>
+</html>

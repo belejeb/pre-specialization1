@@ -1,0 +1,46 @@
+<html lang="es">
+<head>
+<meta charset=""utf-8">
+<title>Validacion de Formularios:Numeros de Telefono</title>
+<link rel="stylesheet" href="../recursos/css/estilo.css">
+<script>
+function iniciar()
+{
+	document.getElementById("informacion").addEventListener("invalid", validacion, true);
+	document.getElementById("informacion").addEventListener("input", controlar, false);
+}
+function controlar(e)
+{
+ var elemento=e.target;
+ if(elemento.validity.valid)
+ {
+ elemento.classList.remove('css_error_input');
+ elemento.classList.add('css_ok_input');
+} 
+else
+{
+	elemento.classList.add('css_error_input');
+  }
+}
+function validacion(e)
+{
+var elemento=e.target;
+elemento.classList.add('cs_error_input');
+}
+window.addEventListener("load",iniciar,false);
+</script>
+</head>
+<body>
+<section>
+	<form id="informacion"name="informacion" method="get">
+		<label for="input1">Ingresar n&uacute;mero de Celular (Formato:####-####):</label> <input type="text"name="input1" id="input1" pattern= "^[6-7]{1}[0-9]{3}-[0-9]{4}$" required><br>
+		<label for="input2">Ingresar n&uacute;mero Linea Fija (Formato:####-####):</label> <input type="text"name="input2" id="input2" pattern= "^[2]{1}[0-9]{3}-[0-9]{4}$"  required><br>
+		<label for="input3">Ingresar n&uacute;mero de telefono formato de Mexico(Formato:##-##-##-##):</label> <input type="text"name="input3" id="input3" pattern= "^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$" required><br>
+		<label for="input4">Ingresar n&uacute;mero de telefono formato EEUU(Formato:(###)###-####):</label> <input type="text"name="input4" id="input4" pattern= "^[(]\d{3}[)]\d{3}[-]\d{4}$" required><br>
+        <label for="input5">Ingresar n&uacute;mero con codigo de area internacional(Formato: +(###)###-####):</label> <input type="text"name="input5" id="input5" pattern= "^[+][(]\d{3}[)]\d{3,4}[-]\d{4}$" required><br>
+
+	    <input type="submit" id ="enviar" value= "REGISTRAR">
+</form>
+</section>
+</body>
+</html>
