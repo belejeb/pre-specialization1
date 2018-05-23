@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario jquery</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#formulario").submit(function () {
+  if($("#nombre").val().length < 1) {
+    alert("El nombre es obligatorio");
+    return false;
+  }
+  if($("#email").val().length < 1) {
+    alert("El correo es obligatorio");
+    return false;
+  }
+  if($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
+            alert('El correo electrónico introducido no es correcto.');
+            return false;
+        }
+else {
+  alert('El email introducido es correcto.');
+}
+
+
+  if($("#edad").val().length < 1) {
+    alert("la edad es obligatoria");
+    return false;
+  }
+  if ($("#edad").val()<=18 ) {
+    alert("La edad minima es 18");
+    return false;
+  }
+  if ($("#edad").val()>50 ) {
+    alert("La edad maxima es 50");
+    return false;
+  }
+
+  return false;
+
+});
+});
+
+
+</script>
+    <form class="" onsubmit=" location.reload(true);" id="formulario" method="post">
+      <label for="Nombre">Nombre:</label>
+      <input type="text" name="Nombre" id="nombre" value=""><br><br>
+      <label for="Correo">Coreo:</label>
+      <input type="text" name="Correo" id="email" value=""><br><br>
+      <label for="Edad">edad:</label>
+      <input type="number" name="" id="edad" ><br><br>
+      <input type="submit" name="" value="enviar">
+    </form>
+  </body>
+</html>

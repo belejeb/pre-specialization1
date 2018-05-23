@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Ejemplo de AJAX con PHP</title>
+</head>
+<body>
+<h1>Ejemplo de AJAX #1</h1>
+<a href= "#" id="cargar1" onclick="cargar1()">Cargar pagina 1</a>
+<a href= "#" id="cargar2" onclick="cargar2()">Cargar pagina 2</a>
+<div id="contenedor" style="border: 1px black solid;">
+	<h1>El contenido se agregara AQUI</h1>
+</div>
+<script >
+function cargar1(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","page1.php",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+	function cargar2(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","page2.php",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+
+
+
+</script>
+</body>
+</html>

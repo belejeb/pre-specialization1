@@ -1,0 +1,22 @@
+body, #searchField    {
+   font:1em "Myriad Pro","Futura Bk",Helvetica,sans-serif;
+   color: Brown;
+}
+
+.suggestions          {
+   background-color:#F69CC6;
+   padding:2px 5px;
+   border:1px solid #8B0000;
+}
+
+.suggestions a:hover   {
+   background-color:#69F;
+}
+
+#popups               {
+   position:absolute;
+}
+
+#searchField a.error   {
+   background-color:#930;
+}

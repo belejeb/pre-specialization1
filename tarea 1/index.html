@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+<head>
+	<title>PHP AJAX</title>
+</head>
+<body>
+<h1>Administracion de base de datos PHP AJAX</h1>
+<a href= "#" id="cargar1" onclick="INSERTAR()">INSERTAR</a>
+<a href= "#" id="cargar2" onclick="ACTUALIZAR()">ACTUALIZAR</a>
+<a href= "#" id="cargar1" onclick="BUSCAR()">BUSCAR</a>
+<a href= "#" id="cargar2" onclick="ELIMINAR()">ELIMINAR</a>
+<a href= "#" id="cargar1" onclick=" MOSTARDATOS()">MOSTAR DATOS</a>
+<div id="contenedor" style="border: 1px black solid;">
+	<h1>Area para la administracion de datos</h1>
+</div>
+<script >
+function INSERTAR(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","insersion.php",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+	function ACTUALIZAR(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","modificacion.php",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+function BUSCAR(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","busqueda.html",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+	function ELIMINAR(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","eliminacion.php",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+function MOSTARDATOS(){
+	xhr = new XMLHttpRequest();
+	xhr.open("GET","MOSTRARDATOS.php",false);
+	xhr.send();
+	con = document.getElementById("contenedor");
+	con.innerHTML =xhr.responseText;
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<head>
+<title> Ejemplo JQUERY</title>
+<style type="text/css">
+#capa1{width: 250px;height: 100px;border: 2px solid black; float: right;}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function(){
+	num=0;
+	$("#capa1").html('<p>aun no has pulsado</p>');
+	$("#boton1").click(function (){
+		num++;
+		$("#capa1").html('<p>has pulsado '+num+'veces </p>');
+	});
+});
+</script>
+</head>
+</div>
+<br/>
+<div id="capa1"></div>
+<button id="boton1">CLIC</button>

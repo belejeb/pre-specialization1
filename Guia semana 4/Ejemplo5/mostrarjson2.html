@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Leer JSON con jQuery - EjemploCodigo</title>
+<link rel="stylesheet" href="cssestilo.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script> 
+
+	
+	
+</head>
+
+
+<body>
+ 
+
+
+        <!-- Cabecera -->
+        <header>
+            <h1>Leer JSON con jQuery</h1>
+        </header>
+
+        <!-- Contenido -->
+        <section>
+            
+
+			<table class="grilla" id="tablajson">
+			<thead>
+			<th>Id</th>
+			<th>Nombre</th>
+			<th>Edad</th>
+			<th>Género</th>
+			<th>Email</th>			
+			<th>Localidad</th>
+			</thead>
+			<tbody></tbody>
+			</table>
+
+			<script type="text/javascript">
+
+			$(document).ready(function(){
+			var url="prueba.json";
+			$("#tablajson tbody").html("");
+			$.getJSON(url,function(clientes){
+			$.each(clientes, function(i,cliente){
+			var newRow =
+			"<tr>"
+			+"<td>"+cliente.id+"</td>"
+			+"<td>"+cliente.nombre+"</td>"
+			+"<td>"+cliente.edad+"</td>"
+			+"<td>"+cliente.genero+"</td>"
+			+"<td>"+cliente.email+"</td>"
+			+"<td>"+cliente.localidad+"</td>"
+			+"</tr>";
+			$(newRow).appendTo("#tablajson tbody");
+			});
+			});
+			});
+
+			</script>
+
+ 
+        </section>
+
+
+
+ 
+
+
+</body>
+</html>
